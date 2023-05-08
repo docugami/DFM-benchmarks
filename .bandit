@@ -1,0 +1,3 @@
+[bandit]
+exclude: /test,./.venv,/tests,/notebooks,/data,/node_modules,/model
+skips: B410,B320,B105,B405,B406,B314,B101,B107
