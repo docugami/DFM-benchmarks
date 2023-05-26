@@ -143,8 +143,8 @@ def tabulate_scores(scores: Dict):
         "Exact Match",
         f"{sim_title} 0.8",
         f"{sim_title} 0.6",
-        "No Output",
         "Average F1",
+        "No Output",
     ]
     table = []
 
@@ -156,6 +156,7 @@ def tabulate_scores(scores: Dict):
                 metrics[f"{sim_title}0.8"],
                 metrics[f"{sim_title}0.6"],
                 metrics["avg_f1"],
+                metrics["no_output"],
             ]
         )
 
