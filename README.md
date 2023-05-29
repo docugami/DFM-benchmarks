@@ -30,7 +30,7 @@ This benchmark measures the model's ability to produce human readable semantic l
 
 | Model                     |   Exact Match |   Similarity@>= 0.8 |   Similarity@>= 0.6 |   Average F1 |
 |---------------------------|---------------|---------------------|---------------------|--------------|
-| **docugami/dfm-cs-small** |      **0.43** |            **0.52** |                0.57 |        54.47 |
+| **docugami/dfm-csl-small** |      **0.43** |            **0.52** |                0.57 |        54.47 |
 | openai/gpt-4              |          0.42 |                0.48 |            **0.58** |    **57.24** |
 | cohere/command            |          0.33 |                0.44 |                0.61 |        54.82 |
 | google/flan-ul2           |          0.12 |                0.25 |                0.49 |        48.19 |
