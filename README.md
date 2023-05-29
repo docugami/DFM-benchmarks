@@ -28,23 +28,23 @@ As of 5/6/2023 we are measuring the following results for the Docugami Foundatio
 This benchmark measures the model's ability to produce human readable semantic labels for small chunks in context e.g., labeling a date as a “Commencement Date” based on the surrounding text and nodes in the document knowledge graph. See ground truth examples under `data/annotations/CSL-Small.csv` for reference examples.
 
 
-| Model                                                                    |   Exact Match | Similarity@>= 0.8 | Similarity@>= 0.6 |  Average F1  |
-|--------------------------------------------------------------------------|---------------|-------------------|-------------------|--------------|
-| **docugami/dfm-csl-small**                                               |      **0.30** |          **0.44** |              0.63 |        58.20 |
-| openai/gpt-4                                                             |          0.24 |              0.42 |          **0.69** |    **61.33** |
-| cohere/command                                                           |          0.22 |              0.35 |              0.49 |        46.21 |
-| google/flan-ul2                                                          |          0.15 |              0.22 |              0.45 |        44.26 |
+| Model                     |   Exact Match |   Similarity@>= 0.8 |   Similarity@>= 0.6 |   Average F1 |
+|---------------------------|---------------|---------------------|---------------------|--------------|
+| **docugami/dfm-cs-small** |      **0.43** |            **0.52** |                0.57 |        54.47 |
+| openai/gpt-4              |          0.42 |                0.48 |            **0.58** |    **57.24** |
+| cohere/command            |          0.33 |                0.44 |                0.61 |        54.82 |
+| google/flan-ul2           |          0.12 |                0.25 |                0.49 |        48.19 |
+
 
 ## Contextual Semantic Labels for Large Chunks: CSL (Large Chunks) 
 This benchmark measures the model's ability to produce human readable semantic labels for clauses, lists, tables, and other large semi-structured nodes in document knowledge graphs e.g., labeling a table as a "Rent Schedule" based on its text and layout/structure in the knowledge graph. See ground truth examples under `data/annotations/CSL-Large.csv` for reference examples.
 
-| Model                                                                    |   Exact Match | Similarity@>= 0.8 | Similarity@>= 0.6 |   Average F1 |
-|--------------------------------------------------------------------------|---------------|-------------------|-------------------|--------------|
-| **docugami/dfm-csl-large**                                               |      **0.20** |          **0.31** |              0.49 |        40.75 |
-| cohere/command                                                           |      **0.20** |              0.30 |              0.51 |    **43.91** |
-| openai/gpt-4                                                             |          0.05 |              0.29 |          **0.60** |        43.72 |
-| google/flan-ul2                                                          |          0.17 |              0.26 |              0.45 |        39.62 |
-
+| Model                        |   Exact Match |   Similarity@>= 0.8 |   Similarity@>= 0.6 |   Average F1 |
+|------------------------------|---------------|---------------------|---------------------|--------------|
+| **docugami/dfm-csl-large**   |      **0.20** |            **0.30** |                0.50 |    **44.91** |
+| openai/gpt-4                 |          0.17 |            **0.30** |            **0.58** |        43.52 |
+| cohere/command               |          0.12 |                0.27 |                0.51 |        41.04 |
+| google/flan-ul2              |          0.10 |                0.19 |                0.43 |        36.93 |
 
 # Contributing
 
