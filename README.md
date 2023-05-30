@@ -22,7 +22,9 @@ All data is samples from Docugami released under the license of this repo, excep
 
 # Benchmarks and Current Results
 
-As of 5/29/2023 we are measuring the following results for the Docugami Foundation Model (DFM), compared to other widely used models suitable for commercial use. We measured each model with the same prompt, with input text capped at 1024 chars, and max output tokens set to 10. We are reporting different metrics against the human-annotated ground truth as implemented in `docugami/dfm_benchmarks/scorer.py` specifically Exact Match, Vector Similarity (above different thresholds) and Average F1 for output tokens. These metrics give a more balanced view of the output of each model, since generative labels are meant to capture the semantic meaning of each node, and may not necessarily match the ground truth exactly.
+As of 5/29/2023 we are measuring the following results for the Docugami Foundation Model (DFM), compared to other widely used models suitable for commercial use. We measured each model with the same prompt, with input text capped at 1024 chars, and max output tokens set to 10. 
+
+We are reporting different metrics against the human-annotated ground truth as implemented in `docugami/dfm_benchmarks/scorer.py` specifically Exact Match, Vector Similarity (above different thresholds) and Average F1 for output tokens. These metrics give a more balanced view of the output of each model, since generative labels are meant to capture the semantic meaning of each node, and may not necessarily match the ground truth exactly.
 
 ## Contextual Semantic Labels for Small Chunks: CSL (Small Chunks) 
 This benchmark measures the model's ability to produce human readable semantic labels for small chunks in context e.g., labeling a date as a “Commencement Date” based on the surrounding text and nodes in the document knowledge graph. See ground truth examples under `data/annotations/CSL-Small.csv` for reference examples.
@@ -35,6 +37,7 @@ This benchmark measures the model's ability to produce human readable semantic l
 | cohere/command            |          0.33 |                0.44 |                0.61 |        54.82 |
 | google/flan-ul2           |          0.12 |                0.25 |                0.49 |        48.19 |
 
+DFM currently outperforms on the more stringent comparisons i.e., Exact Match and Similarity@>=0.8 (which can be thought of as "almost exact match" in terms of semantic similarity). This means that Docugami’s output more closely matches human labels, either exactly or very closely.
 
 ## Contextual Semantic Labels for Large Chunks: CSL (Large Chunks) 
 This benchmark measures the model's ability to produce human readable semantic labels for clauses, lists, tables, and other large semi-structured nodes in document knowledge graphs e.g., labeling a table as a "Rent Schedule" based on its text and layout/structure in the knowledge graph. See ground truth examples under `data/annotations/CSL-Large.csv` for reference examples.
@@ -45,6 +48,8 @@ This benchmark measures the model's ability to produce human readable semantic l
 | openai/gpt-4                 |          0.17 |            **0.30** |            **0.58** |        43.52 |
 | cohere/command               |          0.12 |                0.27 |                0.51 |        41.04 |
 | google/flan-ul2              |          0.10 |                0.19 |                0.43 |        36.93 |
+
+DFM currently outperforms or matches GPT-4 on the more stringent comparisons i.e., Exact Match and Similarity@>=0.8 (which can be thought of as "almost exact match" in terms of semantic similarity). This means that Docugami’s output more closely matches human labels, either exactly or very closely.
 
 # Contributing
 
