@@ -1,11 +1,11 @@
 Text,Ground Truth,docugami/dfm-csl-large
-"This Services Agreement (the “Agreement”) sets forth terms under which MagicSoft, Inc. a Washington Corporation (“Company”) located at 600 4th Ave, Seattle, WA 98104 shall provide services to Daltech, Inc., a Washington Corporation (the “Client”) located at 701 1st St, Kirkland, WA 98033. This Agreement is effective as of February 15, 2021 (“Effective Date”).",Agreement Preamble
-"This agreement shall continue in force and effect until December 31, 2025 and shall be automatically renewed for successive one-year terms annually thereafter unless notice of non-renewal is given by the Company or the Client before the end of the term. Company shall have the right to modify, reject, or terminate any SOW and any related work in process with five days written notice to Client. In the event Company terminates the SOW prior to completion of Services, the Client shall pay Company the fees due under the SOW with respect to Services completed as of the date of termination. Payment for completed work will be deducted from the deposit. Company will retain the non-refundable 30% of the Deposit and return any unearned portion exceeding 30% of the Deposit. Any amount due for services performed by Company above the deposit will be billed to Client and Client shall promptly pay.",Termination Clause
-"A term commencing on the Commencement Date and continuing for 84 full calendar months (plus any partial calendar month in which the Commencement Date falls), as extended or sooner terminated under the terms of this Lease. If the Commencement Date falls on a day other than the first day of a month, then for purposes of calculating the length of the Lease Term, the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs. Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced (i.e., $38.00 per square foot).",Term of Agreement
-"In no event shall the Trustee be responsible or liable for any failure or delay in the performance of its obligations under this Indenture arising out of or caused by, directly or indirectly, forces beyond its reasonable control, including without limitation strikes, work stoppages, accidents, acts of war or terrorism, civil or military disturbances, nuclear or natural catastrophes or acts of God, and interruptions, loss or malfunctions of utilities, communications or computer (software or hardware) services.",Force Majeure
-6.2.1. Additional Exclusion Criteria for Inpatient Dosing Days ......................................28,Inpatient Dosing Days Exclusion Criteria
-"(g)  ""Modifications"" means Enhancements and/or correction of Errors, and Modifications shall be deemed to have been accepted by Licensee upon the lapse of sixty (60) days following successful installation of any Modifications unless Licensee notifies Licensor in writing prior to the lapse of such period that the Modifications in question do not conform to Specifications;",Modifications Definition
-"R.O.C. corporate holders must include the interest or deemed interest receivable under the notes as part of their taxable income and pay income tax at a flat rate of 20 per cent. (unless the total taxable income for a fiscal year is under $500,000 New Taiwan Dollars) , as they are subject to income tax on their worldwide income on an accrual basis. The alternative minimum tax (‚ÄúAMT‚Äù) is not applicable.",Taxation Rules
+"This Services Agreement (the “Agreement”) sets forth terms under which MagicSoft, Inc. a Washington Corporation (“Company”) located at 600 4th Ave, Seattle, WA 98104 shall provide services to Daltech, Inc., a Washington Corporation (the “Client”) located at 701 1st St, Kirkland, WA 98033. This Agreement is effective as of February 15, 2021 (“Effective Date”).",Agreement Preamble,not provided
+"This agreement shall continue in force and effect until December 31, 2025 and shall be automatically renewed for successive one-year terms annually thereafter unless notice of non-renewal is given by the Company or the Client before the end of the term. Company shall have the right to modify, reject, or terminate any SOW and any related work in process with five days written notice to Client. In the event Company terminates the SOW prior to completion of Services, the Client shall pay Company the fees due under the SOW with respect to Services completed as of the date of termination. Payment for completed work will be deducted from the deposit. Company will retain the non-refundable 30% of the Deposit and return any unearned portion exceeding 30% of the Deposit. Any amount due for services performed by Company above the deposit will be billed to Client and Client shall promptly pay.",Termination Clause,not provided
+"A term commencing on the Commencement Date and continuing for 84 full calendar months (plus any partial calendar month in which the Commencement Date falls), as extended or sooner terminated under the terms of this Lease. If the Commencement Date falls on a day other than the first day of a month, then for purposes of calculating the length of the Lease Term, the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs. Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced (i.e., $38.00 per square foot).",Term of Agreement,not provided
+"In no event shall the Trustee be responsible or liable for any failure or delay in the performance of its obligations under this Indenture arising out of or caused by, directly or indirectly, forces beyond its reasonable control, including without limitation strikes, work stoppages, accidents, acts of war or terrorism, civil or military disturbances, nuclear or natural catastrophes or acts of God, and interruptions, loss or malfunctions of utilities, communications or computer (software or hardware) services.",Force Majeure,not provided
+6.2.1. Additional Exclusion Criteria for Inpatient Dosing Days ......................................28,Inpatient Dosing Days Exclusion Criteria,not provided
+"(g)  ""Modifications"" means Enhancements and/or correction of Errors, and Modifications shall be deemed to have been accepted by Licensee upon the lapse of sixty (60) days following successful installation of any Modifications unless Licensee notifies Licensor in writing prior to the lapse of such period that the Modifications in question do not conform to Specifications;",Modifications Definition,not provided
+"R.O.C. corporate holders must include the interest or deemed interest receivable under the notes as part of their taxable income and pay income tax at a flat rate of 20 per cent. (unless the total taxable income for a fiscal year is under $500,000 New Taiwan Dollars) , as they are subject to income tax on their worldwide income on an accrual basis. The alternative minimum tax (‚ÄúAMT‚Äù) is not applicable.",Taxation Rules,not provided
 "a. Admit to telemetry/9A.
 
                          b. Will obtain MRI/MRA to assess acuity of brain infarcts. Will obtain TTE to assess wall motion abnormalities in heart, given that patient has never had one in the past. Mural and valvular thrombi better visualized with TEE, but more invasive test.
@@ -17,11 +17,11 @@ Text,Ground Truth,docugami/dfm-csl-large
                          e. NPO until swallow evaluation.
 
                          f. PT/OT consults to assess rehab needs, cane usage, and work with residual weakness.
-",Treatment Plan
-"Obligations and Restrictions. Each party agrees: (i) to maintain the other party's Confidential Information in strict confidence; (ii) not to disclose such Confidential Information to any third party; and (iii) not to use such Confidential Information for any purpose except for the Purpose. Each party may disclose the other party‚Äôs Confidential Information to its employees and consultants who have a bona fide need to know such Confidential Information for the Purpose, but solely to the extent necessary to pursue the Purpose and for no other purpose; provided, that each such employee and consultant first executes a written agreement (or is otherwise already bound by a written agreement) that contains use and nondisclosure restrictions at least as protective of the other party‚Äôs Confidential Information as those set forth in this Agreement.",Confidentiality Obligations
-was in the possession of the Receiving Party before such Information was imparted or disclosed by the Disclosing Party;,Existing Information
-"The notes are not bank deposits and are not insured by the Federal Deposit Insurance Corporation or any other governmental agency, nor are they obligations of, or guaranteed by, a bank.",Uninsured Notes
-4. DM: previously diet controlled. Begin ADA diet and cover with Novolog SSI as needed (give 2 Units for every 50 above glucose of 100) Will order HgbA1C to assess status of recent glycemic control.,Diabetes Management
+",Treatment Plan,not provided
+"Obligations and Restrictions. Each party agrees: (i) to maintain the other party's Confidential Information in strict confidence; (ii) not to disclose such Confidential Information to any third party; and (iii) not to use such Confidential Information for any purpose except for the Purpose. Each party may disclose the other party‚Äôs Confidential Information to its employees and consultants who have a bona fide need to know such Confidential Information for the Purpose, but solely to the extent necessary to pursue the Purpose and for no other purpose; provided, that each such employee and consultant first executes a written agreement (or is otherwise already bound by a written agreement) that contains use and nondisclosure restrictions at least as protective of the other party‚Äôs Confidential Information as those set forth in this Agreement.",Confidentiality Obligations,not provided
+was in the possession of the Receiving Party before such Information was imparted or disclosed by the Disclosing Party;,Existing Information,not provided
+"The notes are not bank deposits and are not insured by the Federal Deposit Insurance Corporation or any other governmental agency, nor are they obligations of, or guaranteed by, a bank.",Uninsured Notes,not provided
+4. DM: previously diet controlled. Begin ADA diet and cover with Novolog SSI as needed (give 2 Units for every 50 above glucose of 100) Will order HgbA1C to assess status of recent glycemic control.,Diabetes Management,not provided
 "10
 
                   CATERERS
@@ -59,7 +59,7 @@ was in the possession of the Receiving Party before such Information was imparte
                           $
 
      102.00
-",Sales Tax Calculation
+",Sales Tax Calculation,not provided
 "(A)  This Agreement is a license agreement and not an agreement for the sale of software or services.
 
 
@@ -69,7 +69,7 @@ was in the possession of the Receiving Party before such Information was imparte
 
 
    (B)  This Agreement gives Licensee limited rights to use the Software and Related Materials described below and imposes upon Licensee certain obligations to protect the Software and Related Materials from unauthorized use, reproduction, distribution or publication.
-",License Agreement
+",License Agreement,not provided
 "United States - TSCA 4(a) - Final Test Rules: Not listed
 
                      United States - TSCA 4(a) - ITC Priority list: Not listed
@@ -81,11 +81,11 @@ was in the possession of the Receiving Party before such Information was imparte
                      United States - TSCA 5(a)2 - Final significant new use rules: Not
 
                      listed
-",US TSCA Regulations
-"Under this design, if two periods occur on consecutive days, the interval between the last bolus on the first day and the first bolus on the second day is much longer compared to the length of time that the treatment (LY900014 or Humalog) lasts in the bloodstream; therefore, no carryover effect is assumed. This enables PK and GD data from the breakfast meal tests of each period to be analyzed independently and separately.",Design of Study
-"9.4 Equitable Relief. The Parties hereto agree that irreparable damage would occur in the event that any provision of this Section 9 were not performed in accordance with the terms hereof. Accordingly, prior to the expiration or termination of this Agreement pursuant to Section 3, in the event of any breach or threatened breach by a Party of its obligations under this Agreement, the affected Party shall be entitled to equitable relief G@ncluding specific performance of the terms hereof) without prejudice to any other rights or remedies that may otherwise be available to such other Party.",Equitable Relief
-"Cardiovascular: RRR, Normal S1, S2; no murmurs, rubs, or gallops; no prominent neck veins or JVD noted. 2+ pulses bilaterally (radial, femoral, dorsalis pedis)",Cardiovascular Exam
-the parties hereto have executed this Agreement as of the date first above written.,Execution Date
+",US TSCA Regulations,not provided
+"Under this design, if two periods occur on consecutive days, the interval between the last bolus on the first day and the first bolus on the second day is much longer compared to the length of time that the treatment (LY900014 or Humalog) lasts in the bloodstream; therefore, no carryover effect is assumed. This enables PK and GD data from the breakfast meal tests of each period to be analyzed independently and separately.",Design of Study,not provided
+"9.4 Equitable Relief. The Parties hereto agree that irreparable damage would occur in the event that any provision of this Section 9 were not performed in accordance with the terms hereof. Accordingly, prior to the expiration or termination of this Agreement pursuant to Section 3, in the event of any breach or threatened breach by a Party of its obligations under this Agreement, the affected Party shall be entitled to equitable relief G@ncluding specific performance of the terms hereof) without prejudice to any other rights or remedies that may otherwise be available to such other Party.",Equitable Relief,not provided
+"Cardiovascular: RRR, Normal S1, S2; no murmurs, rubs, or gallops; no prominent neck veins or JVD noted. 2+ pulses bilaterally (radial, femoral, dorsalis pedis)",Cardiovascular Exam,not provided
+the parties hereto have executed this Agreement as of the date first above written.,Execution Date,not provided
 "Coverages
 
   Building -
@@ -121,14 +121,14 @@ the parties hereto have executed this Agreement as of the date first above writt
        Agreed Value
 
        YES
-",Building Coverage Details
+",Building Coverage Details,not provided
 "Notwithstanding anything in this Agreement to the contrary, under no circumstances shall Supplier be obligated to supply Purchaser with more than (1) 120,000 units of LeverCross Product during any twelve
 
                      (12) month period or more than 8,000 units of LeverCross Product during any one (1) month period, or (11) 20,000 units of NanoCross Product during any twelve (12) month period or more than 3,500 units of NanoCross Product during any one (1) month period, in each case unless Supplier agrees in writing to supply such
-",Product Quantity Limits
-"The proposed transferee has sufficient financial wherewithal to discharge its obligations under this Lease as determined by Landlord's criteria for selecting Project tenants and has a tangible net worth, experience, and reputation that is not less than the tangible net worth, experience, and reputation of Tenant on the Date of this Lease or the date of the transfer, whichever is greater. ""Tangible net worth"" shall mean the excess of the value of tangible assets (i.e. assets excluding those which are intangible such as goodwill, patents and trademarks) over liabilities.",Financial Qualifications
-"All questions concerning the validity or meaning of this agreement or relating to the rights and obligations of the Parties with respect to performance under this agreement shall be construed and resolved under the laws of the State of Tennessee , without regard to principles of conflicts of laws. The parties agree that any claims asserted in any legal proceeding by one party against the other shall be commenced and maintained in any state or federal court in Nashville, Tennessee or Columbus, Ohio and the parties submit to the jurisdiction of these courts.",Governing Law
-"10.2 Discharge of Liens. If any lien is filed against the Premises for work or materials claimed to have been furnished to Tenant, Tenant shall cause it to be discharged of record or properly transferred to a bond under Section 713.24, Florida Statutes, within 10 days after notice to Tenant. Further, Tenant shall indemnify, defend, and save Landlord harmless from and against any damage or loss, including reasonable attorneys' fees, incurred by Landlord as a result of any liens or other claims arising out of or related to work performed in the Premises by or on behalf of Tenant.",Discharge of Liens
+",Product Quantity Limits,not provided
+"The proposed transferee has sufficient financial wherewithal to discharge its obligations under this Lease as determined by Landlord's criteria for selecting Project tenants and has a tangible net worth, experience, and reputation that is not less than the tangible net worth, experience, and reputation of Tenant on the Date of this Lease or the date of the transfer, whichever is greater. ""Tangible net worth"" shall mean the excess of the value of tangible assets (i.e. assets excluding those which are intangible such as goodwill, patents and trademarks) over liabilities.",Financial Qualifications,not provided
+"All questions concerning the validity or meaning of this agreement or relating to the rights and obligations of the Parties with respect to performance under this agreement shall be construed and resolved under the laws of the State of Tennessee , without regard to principles of conflicts of laws. The parties agree that any claims asserted in any legal proceeding by one party against the other shall be commenced and maintained in any state or federal court in Nashville, Tennessee or Columbus, Ohio and the parties submit to the jurisdiction of these courts.",Governing Law,not provided
+"10.2 Discharge of Liens. If any lien is filed against the Premises for work or materials claimed to have been furnished to Tenant, Tenant shall cause it to be discharged of record or properly transferred to a bond under Section 713.24, Florida Statutes, within 10 days after notice to Tenant. Further, Tenant shall indemnify, defend, and save Landlord harmless from and against any damage or loss, including reasonable attorneys' fees, incurred by Landlord as a result of any liens or other claims arising out of or related to work performed in the Premises by or on behalf of Tenant.",Discharge of Liens,not provided
 "The terms of the notes being offered are as follows:
 
         Issuer: The Goldman Sachs Group, Inc. Face Amount: USD 240,000,000
@@ -304,13 +304,13 @@ the parties hereto have executed this Agreement as of the date first above writt
              The notes are not bank deposits and are not insured by the Federal Deposit Insurance Corporation or any other governmental agency, nor are they obligations of, or guaranteed by, a bank.
 
              To the extent permitted by the law and regulations of the Republic of China (‚ÄúR.O.C.‚Äù or ‚ÄúTaiwan‚Äù), Goldman Sachs International or other affiliates of The Goldman Sachs Group, Inc. may use this Pricing Supplement in a market- making trans
-",Note Terms and Conditions
+",Note Terms and Conditions,not provided
 "Lead Manager
 
                                      Goldman Sachs (Asia) L.L.C., Taipei Branch
 
                                                   Co-Managers
-",Lead and Co-Managers
+",Lead and Co-Managers,not provided
 "We Have the Right to Redeem Your Note at Our Option
 
                 On each early redemption date listed above, we will have the option to redeem your notes at a price equal to the product of (i) the face amount outstanding on such early redemption date, multiplied by (ii) the relevant early
@@ -318,36 +318,36 @@ the parties hereto have executed this Agreement as of the date first above writt
                                                      S-7 redemption amount listed above which corresponds to such early redemption date, by notice to Euroclear Bank SA/NV and Clearstream Banking, soci√©t√© anonyme, no fewer than five (5) business days prior to the relevant early redemption date. Even if we do not exercise this option, our ability to do so may adversely affect the value of your notes.
 
                           ADDITIONAL INFORMATION ABOUT THE PLAN OF DISTRIBUTION
-",Early Redemption Option
-Up to 36 patients may be enrolled to ensure that at least 30 patients will complete the study. Thirty completing patients will provide greater than 95% power to demonstrate a 2-fold increase in the serum insulin lispro AUC(0- 30min) between LY900014 and Humalog when both are given immediately before meals.,Study Enrollment Requirements
-"Florida Statutes. Tenant represents to Landlord that any improvements that might be made by Tenant to the Premises are not required to be made under the terms of this Lease and that any improvements which may be made by Tenant do not constitute the ""pith of the lease"" under applicable Florida case law. Tenant shall notify every contractor making improvements to the Premises that the interest of the Landlord in the Premises shall not be subject to liens.",Florida Statutes Compliance
-"Client will defend, indemnify and hold Company harmless from any and all claims, losses, liabilities, damages, expenses and costs (including attorneys‚Äô fees and court costs) arising from or relating to any claims regarding elements or materials provided by Client and incorporated into the Deliverable. Additionally, Client will defend, indemnify and hold Company harmless from any and all claims, losses, liabilities, damages, expenses and costs (including attorneys‚Äô fees and court costs) arising from or relating to any claims regarding Client‚Äôs unauthorized use of any music, images, or other materials comprising the Deliverable.",Indemnification Clause
-"Carrier represents and warrants that all transportation performed under this Agreement shall be contract carriage. To the extent that Carrier performs services pursuant to this Agreement within, or to or from Canada, it shall procure and maintain any and all operating authorities or permits required to be held by Carrier under any applicable Federal, Provincial or Territorial laws and shall adhere to the Canadian National Safety Code. Without cost to Shipper, Carrier shall provide and complete all preventive maintenance and ongoing maintenance including, but not limited to, periodic safety inspections, annual safety inspections and emissions testing pursuant to",Maintenance Requirements
+",Early Redemption Option,not provided
+Up to 36 patients may be enrolled to ensure that at least 30 patients will complete the study. Thirty completing patients will provide greater than 95% power to demonstrate a 2-fold increase in the serum insulin lispro AUC(0- 30min) between LY900014 and Humalog when both are given immediately before meals.,Study Enrollment Requirements,not provided
+"Florida Statutes. Tenant represents to Landlord that any improvements that might be made by Tenant to the Premises are not required to be made under the terms of this Lease and that any improvements which may be made by Tenant do not constitute the ""pith of the lease"" under applicable Florida case law. Tenant shall notify every contractor making improvements to the Premises that the interest of the Landlord in the Premises shall not be subject to liens.",Florida Statutes Compliance,not provided
+"Client will defend, indemnify and hold Company harmless from any and all claims, losses, liabilities, damages, expenses and costs (including attorneys‚Äô fees and court costs) arising from or relating to any claims regarding elements or materials provided by Client and incorporated into the Deliverable. Additionally, Client will defend, indemnify and hold Company harmless from any and all claims, losses, liabilities, damages, expenses and costs (including attorneys‚Äô fees and court costs) arising from or relating to any claims regarding Client‚Äôs unauthorized use of any music, images, or other materials comprising the Deliverable.",Indemnification Clause,not provided
+"Carrier represents and warrants that all transportation performed under this Agreement shall be contract carriage. To the extent that Carrier performs services pursuant to this Agreement within, or to or from Canada, it shall procure and maintain any and all operating authorities or permits required to be held by Carrier under any applicable Federal, Provincial or Territorial laws and shall adhere to the Canadian National Safety Code. Without cost to Shipper, Carrier shall provide and complete all preventive maintenance and ongoing maintenance including, but not limited to, periodic safety inspections, annual safety inspections and emissions testing pursuant to",Maintenance Requirements,not provided
 "1. To evaluate the effect of injection-to-meal timings (immediately before the start of meal, and 20 minutes following the start of the meal) on the GD response to LY900014 compared to Humalog, as measured by the MMTT
 
              2. To evaluate the tolerability of LY900014
-",Study Objectives
-Put on appropriate personal protective equipment (see Section 8).,PPE Requirements
-"[3] have a body mass index (BMI) of 18.5 kg/m2 to 35.0 kg/m2, both inclusive, at screening.",BMI Requirements
-"Landlord shall have no obligation to perform any alterations or tenant improvements or other work in the Premises and Tenant shall continue possession of the Premises in its ""as-is,"" ""where-is,"" and ""with all faults"" condition.",No Landlord Obligation
-"11.1 Limit on Liability. Neither party will be liable for breach-of-contract damages suffered by the other party that are remote or speculative, or that could not have reasonably been foreseen on entry into this agreement.",Limitation of Liability
-"responsible for the direct acts of its employees, and not for the actions of customers, lumpers, draymen, other carriers, or any other third party (‚ÄúThird Parties‚Äù), unless Shipper proximately caused or contributed to the actions of any of the Third Parties. If Carrier agrees to interchange equipment to another carrier or to use equipment owned by a third party, Carrier, will address any interchange agreement directly with that motor carrier or equipment owner.",Third Party Liability
+",Study Objectives,not provided
+Put on appropriate personal protective equipment (see Section 8).,PPE Requirements,not provided
+"[3] have a body mass index (BMI) of 18.5 kg/m2 to 35.0 kg/m2, both inclusive, at screening.",BMI Requirements,not provided
+"Landlord shall have no obligation to perform any alterations or tenant improvements or other work in the Premises and Tenant shall continue possession of the Premises in its ""as-is,"" ""where-is,"" and ""with all faults"" condition.",No Landlord Obligation,not provided
+"11.1 Limit on Liability. Neither party will be liable for breach-of-contract damages suffered by the other party that are remote or speculative, or that could not have reasonably been foreseen on entry into this agreement.",Limitation of Liability,not provided
+"responsible for the direct acts of its employees, and not for the actions of customers, lumpers, draymen, other carriers, or any other third party (‚ÄúThird Parties‚Äù), unless Shipper proximately caused or contributed to the actions of any of the Third Parties. If Carrier agrees to interchange equipment to another carrier or to use equipment owned by a third party, Carrier, will address any interchange agreement directly with that motor carrier or equipment owner.",Third Party Liability,not provided
 "INSURANCE.
 
                          7.1 Tenant's Insurance. Tenant shall obtain and keep in full force and effect the following insurance coverages:
-",Tenant's Insurance
+",Tenant's Insurance,not provided
 "time, and any regulations derived therefrom, including, without limitation, shipping Commodities only with food
 
                            and acceptable non- food products as defined in the Sanitary Food Transportation Act of 1990.
-",Sanitary Food Transportation Act Compliance
-"No Obligations. Each party retains the right, in its sole discretion, to determine whether to disclose any Confidential Information to the other party. Neither party will be required to negotiate nor enter into any other agreements or arrangements with the other party, whether or not related to the Purpose.",No Obligations
+",Sanitary Food Transportation Act Compliance,not provided
+"No Obligations. Each party retains the right, in its sole discretion, to determine whether to disclose any Confidential Information to the other party. Neither party will be required to negotiate nor enter into any other agreements or arrangements with the other party, whether or not related to the Purpose.",No Obligations,not provided
 "(c) Carrier (and if different from Carrier, any driver of a Shipment) has not been and is not now under any indictment, or a defendant in any lawsuit, or the subject of any administrative or other proceeding instituted by any
 
                     federal, state or local governmental agency or entity, and to the best of its (their) knowledge there are no such
 
                                                              proceedings threatened.
-",Legal Compliance
-"6.4.4 The proposed transferee shall not be any person or entity who shall at that time be a tenant, subtenant, or other occupant of any part of the Project, or an affiliate of any of them, or who dealt with Landlord or Landlord's agent (directly or through a broker) as to space in the Project during the six months immediately preceding Tenant's request for Landlord's consent.",Transfer Restrictions
+",Legal Compliance,not provided
+"6.4.4 The proposed transferee shall not be any person or entity who shall at that time be a tenant, subtenant, or other occupant of any part of the Project, or an affiliate of any of them, or who dealt with Landlord or Landlord's agent (directly or through a broker) as to space in the Project during the six months immediately preceding Tenant's request for Landlord's consent.",Transfer Restrictions,not provided
 "Potential acute health effects
 
                   Eye contact
@@ -375,12 +375,12 @@ Put on appropriate personal protective equipment (see Section 8).,PPE Requiremen
                            :
 
                  No known significant effects or critical hazards.
-",Health Effects
-"[32] have a significant history of alcoholism or drug abuse as judged by the investigator or consuming more than 24 g of alcohol per day for men, or more than 12 g of alcohol per day for women (1 unit of alcohol is defined as 10 mL [8 g] of pure alcohol).",Alcohol or Drug Abuse Criteria
+",Health Effects,not provided
+"[32] have a significant history of alcoholism or drug abuse as judged by the investigator or consuming more than 24 g of alcohol per day for men, or more than 12 g of alcohol per day for women (1 unit of alcohol is defined as 10 mL [8 g] of pure alcohol).",Alcohol or Drug Abuse Criteria,not provided
 "1. infertile due to surgical sterilization (hysterectomy, bilateral oophorectomy or bilateral salpingectomy), congenital anomaly such as mullerian agenesis; or
 
                                              2. post-menopausal ‚Äì defined as a woman being amenorrheic for more than 1 year without an alternative medical cause and a serum follicle- stimulating hormone (FSH) level compatible with postmenopausal status. A FSH level in the post- menopausal range may be used to confirm a post- menopausal state in women not using hormonal contraception or hormonal replacement therapy.
-",Menopausal Status Requirements
+",Menopausal Status Requirements,not provided
 "Skin Respiratory
 
                                                     : Mixture.Not fully tested.
@@ -388,11 +388,11 @@ Put on appropriate personal protective equipment (see Section 8).,PPE Requiremen
                                                     : Mixture.Not fully tested.
 
                  Mutagenicity
-",Skin Respiratory Mutagenicity
-"This Agreement shall be binding upon, inure to the benefit of, and be enforceable by the Parties, as well as their respective successors and permitted assigns.",Applicability and Enforcement Rights
-"(c)  reverse engineer, decompile or disassemble the Software (except that the Licensee may decompile the Software for the purposes of interoperability only to the extent permitted by and subject to strict compliance under the United States Law).",Reverse Engineering Restriction
-"S-7 redemption amount listed above which corresponds to such early redemption date, by notice to Euroclear Bank SA/NV and Clearstream Banking, soci√©t√© anonyme, no fewer than five (5) business days prior to the relevant early redemption date. Even if we do not exercise this option, our ability to do so may adversely affect the value of your notes.",Redemption Notice Requirements
-"9.   Updates. Provided that Licensee is in compliance with the terms and conditions of this Agreement, Licensor agrees to make available to Licensee all updates, improvements and enhancements for the Software, if any, at Licensor‚Äôs then current update fee of $5,000 per update. Nothing herein shall be construed or interpreted as requiring Licensor to develop any such updates, improvements or enhancements.",Software Updates
+",Skin Respiratory Mutagenicity,not provided
+"This Agreement shall be binding upon, inure to the benefit of, and be enforceable by the Parties, as well as their respective successors and permitted assigns.",Applicability and Enforcement Rights,not provided
+"(c)  reverse engineer, decompile or disassemble the Software (except that the Licensee may decompile the Software for the purposes of interoperability only to the extent permitted by and subject to strict compliance under the United States Law).",Reverse Engineering Restriction,not provided
+"S-7 redemption amount listed above which corresponds to such early redemption date, by notice to Euroclear Bank SA/NV and Clearstream Banking, soci√©t√© anonyme, no fewer than five (5) business days prior to the relevant early redemption date. Even if we do not exercise this option, our ability to do so may adversely affect the value of your notes.",Redemption Notice Requirements,not provided
+"9.   Updates. Provided that Licensee is in compliance with the terms and conditions of this Agreement, Licensor agrees to make available to Licensee all updates, improvements and enhancements for the Software, if any, at Licensor‚Äôs then current update fee of $5,000 per update. Nothing herein shall be construed or interpreted as requiring Licensor to develop any such updates, improvements or enhancements.",Software Updates,not provided
 "2
 
              RESTAURANTS WITH SALE OF ALCOHOLIC BEVERAGES THAT ARE
@@ -504,15 +504,15 @@ Put on appropriate personal protective equipment (see Section 8).,PPE Requiremen
                                               General Liability Quote Summary
 
            Classification Description
-",Alcoholic Beverage Sales
+",Alcoholic Beverage Sales,not provided
 "Section 8.1
 
                     Carrier hereby represents and warrants to Shipper, that as of the Effective Date and as of the date
 
                                                 of each Shipment:
-",Carrier Representations and Warranties
-"To the extent that Carrier performs services pursuant to this Agreement within, or to or from Canada, Carrier warrants that it holds a valid registration with the Commercial Vehicle Operator‚Äôs Registration (CVOR) System for transporting goods through Canada. Carrier shall notify Shipper immediately of any conviction",Canadian CVOR Registration Warrant
-[37] have regular use of or intended use of known inducers or inhibitors of cytochrome P450 [CYP]2C8 or niacin. Patients taking these medications before study enrollment will be eligible with an appropriate washout period which will be evaluated by the investigator in consultation with the Lilly CP,Medication Use Eligibility
+",Carrier Representations and Warranties,not provided
+"To the extent that Carrier performs services pursuant to this Agreement within, or to or from Canada, Carrier warrants that it holds a valid registration with the Commercial Vehicle Operator‚Äôs Registration (CVOR) System for transporting goods through Canada. Carrier shall notify Shipper immediately of any conviction",Canadian CVOR Registration Warrant,not provided
+[37] have regular use of or intended use of known inducers or inhibitors of cytochrome P450 [CYP]2C8 or niacin. Patients taking these medications before study enrollment will be eligible with an appropriate washout period which will be evaluated by the investigator in consultation with the Lilly CP,Medication Use Eligibility,not provided
 "This Agreement may not be modified or amended, except by an agreement in writing signed by an approved representative of Shipper and Carrier. The parties may waive any of the conditions contained herein or any of the obligations of the other party hereunder, but any such waiver shall be effective only if in writing and
 
                                             signed by the party waiving such conditions or obligations.
@@ -522,16 +522,16 @@ Put on appropriate personal protective equipment (see Section 8).,PPE Requiremen
                      Each person executing this Agreement warrants and represents that he is fully authorized to do
 
                                                        so.
-",Modification and Authorization
-Protocol I8B-MC-ITRV(b) A Study to Evaluate the Pharmacokinetics and,Study Protocol
-Note that Insurance1 also offers separate options for some management lines via endorsements to your general liability policy. Your Insurance1 agent will be happy to discuss your options with you.,Endorsement Options
-"d.  Sections 8 and Sections 14 through 17, inclusive, of this agreement shall survive the termination or expiration of this agreement and each Product-specific exhibit to this agreement, and except as set forth herein, no termination of this agreement or any Product-specific exhibit to this agreement shall affect any liabilities arising, or based upon acts or omissions occurring, prior to the date of such termination.",Survival of Terms
-"Co-owner of insured premises - Mortgagee, assignee or receiver",Co-Owner of Insured Premises
-"We will not merge or consolidate with another corporation or corporate entity, unless certain conditions are met.",Merger Restriction
+",Modification and Authorization,not provided
+Protocol I8B-MC-ITRV(b) A Study to Evaluate the Pharmacokinetics and,Study Protocol,not provided
+Note that Insurance1 also offers separate options for some management lines via endorsements to your general liability policy. Your Insurance1 agent will be happy to discuss your options with you.,Endorsement Options,not provided
+"d.  Sections 8 and Sections 14 through 17, inclusive, of this agreement shall survive the termination or expiration of this agreement and each Product-specific exhibit to this agreement, and except as set forth herein, no termination of this agreement or any Product-specific exhibit to this agreement shall affect any liabilities arising, or based upon acts or omissions occurring, prior to the date of such termination.",Survival of Terms,not provided
+"Co-owner of insured premises - Mortgagee, assignee or receiver",Co-Owner of Insured Premises,not provided
+"We will not merge or consolidate with another corporation or corporate entity, unless certain conditions are met.",Merger Restriction,not provided
 "Protocol I8B-MC-ITRV(b) A Study to Evaluate the Pharmacokinetics and
 
                    Glucodynamics of LY900014 compared to Humalog¬Æ in Patients with T1DM .........................................................................................................................1
-",Study Description
+",Study Description,not provided
 "preformed in the ED, prior to assessment
 
                   ÔÇ∑ CT head w/o contrast:
@@ -543,39 +543,39 @@ Note that Insurance1 also offers separate options for some management lines via 
                          o No hemorrhage or mass lesion
 
                   ÔÇ∑ EKG: Sinus bradycardia with rate of 59. Normal intervals (PR = 0.14, QRS = 0.08 Qtc = 0.450) and normal axis. No ventricular hypertrophy or atrial enlargement. No signs of ischemia/infarct. No change from previous EKG (9/05).
-",CT Head and EKG Findings
-"assign, mortgage, charge or otherwise encumber either the Software and Related Materials or its rights under this Agreement.",Encumbrance Restriction
+",CT Head and EKG Findings,not provided
+"assign, mortgage, charge or otherwise encumber either the Software and Related Materials or its rights under this Agreement.",Encumbrance Restriction,not provided
 "a. Will restart prescribed home medications: HCTZ 25 mg po qday and Lotrel 10/20 mg po qday. Currently beta blocker contraindicated due to recurrent cocaine use.
 
                          b. Add Clonidine 0.1 mg po q4hr prn SBP > 180 for increased coverage.
-",Prescribed Medications
+",Prescribed Medications,not provided
 "Carrier shall have no lien, and hereby expressly waives its right to any lien on any
 
                                cargo, freight, or property of Shipper or any of its customers, consignors or consignees.
 
                          EXECUTED on the dates indicated below but effective as of the Effective Date first above written.
-",Waiver of Lien
-"Taxes. CP shall pay when due all sales, use, gross receipts, excise, personal property taxes associated with each Product (excluding any personal property tax associated with CRD‚Äôs equipment used in connection with the Services), and other taxes or similar charges now or hereafter imposed as a result of the transactions contemplated by this agreement, none of which have been included in the fees payable to CRD under this agreement; provided that the amounts payable by CP under this section shall not include taxes based on the net income of CRD.",Tax Payments
-o Gait with mild right foot drag. Negative Romberg.,Gait Assessment
-"Any notice or communication required or permitted hereunder shall be given in writing, sent by",Notification Requirements
-"The interest of Landlord in the Premises shall not be subject in any way to any liens, including construction liens, for Alterations made by or on behalf of Tenant. This exculpation is made with express reference to Section",Lien Exculpation
-"A. Supplier shall not adjust Standard Cost of any Product more than once every twelve (12) months. Purchaser agrees that it shall acquire the Products solely for incorporation into DCB Products and research in connection therewith, and shall not otherwise sell or independently use or commercialize the Products.",Cost Adjustment & Use of Products
-"8. Payment. In exchange for Company‚Äôs Services under this Agreement, the Client shall pay Company the contract price and deposit set forth above. Company will submit a final invoice to Client for all services rendered by the Services Completion Date and Client shall promptly pay. Client is restricted from using any form of the Deliverable until final payment is received. Client shall pay travel and other expenses incurred by Company in performing the Services. In the event of a good faith dispute with regard to an item appearing on an invoice, Company shall have the right to withhold the Deliverable while the parties attempt to resolve the disputes.",Payment Terms
-"25.  Successors. This Agreement may not be assigned or transferred by a party without the prior written consent of the other party hereto, provided, however, that either party may assign this Agreement to any subsidiary, affiliate or an entity which acquires substantially all of it‚Äôs assets and business that is not in direct competition with CRD. Any such assignment shall not materially or adversely affect the rights or obligations of either party to this Agreement.",Successor Assignment
+",Waiver of Lien,not provided
+"Taxes. CP shall pay when due all sales, use, gross receipts, excise, personal property taxes associated with each Product (excluding any personal property tax associated with CRD‚Äôs equipment used in connection with the Services), and other taxes or similar charges now or hereafter imposed as a result of the transactions contemplated by this agreement, none of which have been included in the fees payable to CRD under this agreement; provided that the amounts payable by CP under this section shall not include taxes based on the net income of CRD.",Tax Payments,not provided
+o Gait with mild right foot drag. Negative Romberg.,Gait Assessment,not provided
+"Any notice or communication required or permitted hereunder shall be given in writing, sent by",Notification Requirements,not provided
+"The interest of Landlord in the Premises shall not be subject in any way to any liens, including construction liens, for Alterations made by or on behalf of Tenant. This exculpation is made with express reference to Section",Lien Exculpation,not provided
+"A. Supplier shall not adjust Standard Cost of any Product more than once every twelve (12) months. Purchaser agrees that it shall acquire the Products solely for incorporation into DCB Products and research in connection therewith, and shall not otherwise sell or independently use or commercialize the Products.",Cost Adjustment & Use of Products,not provided
+"8. Payment. In exchange for Company‚Äôs Services under this Agreement, the Client shall pay Company the contract price and deposit set forth above. Company will submit a final invoice to Client for all services rendered by the Services Completion Date and Client shall promptly pay. Client is restricted from using any form of the Deliverable until final payment is received. Client shall pay travel and other expenses incurred by Company in performing the Services. In the event of a good faith dispute with regard to an item appearing on an invoice, Company shall have the right to withhold the Deliverable while the parties attempt to resolve the disputes.",Payment Terms,not provided
+"25.  Successors. This Agreement may not be assigned or transferred by a party without the prior written consent of the other party hereto, provided, however, that either party may assign this Agreement to any subsidiary, affiliate or an entity which acquires substantially all of it‚Äôs assets and business that is not in direct competition with CRD. Any such assignment shall not materially or adversely affect the rights or obligations of either party to this Agreement.",Successor Assignment,not provided
 "Section 14.3 Shipper shall file a claim (i) for loss or damage to shipments within three (3) months from the date of delivery and (ii) for delay (or non-delivery) within three (3) months of the date that delivery reasonably should have been made. Within ninety (90) days of receiving a claim from Shipper for loss, damage, or delay, Carrier shall pay or deny the claim (in which case the reasons for denial shall be fully explained), or make a
 
                                                              firm compromise offer.
-",Claims Filing Requirements
-"original Bill of Lading or accepting an electronic shipping document in lieu of an original Bill of Lading, acknowledges that the Commodities are in good condition except for any exceptions written on these documents. All shipments shall be transported under the bill of lading utilized by Shipper or such other documents that Shipper and Carrier may mutually agree in writing to use. To the extent the terms and conditions of any bill of lading, purchase order, invoice or other document or instrument conflict with any provision of this Agreement, the terms of this",Shipping Documents
+",Claims Filing Requirements,not provided
+"original Bill of Lading or accepting an electronic shipping document in lieu of an original Bill of Lading, acknowledges that the Commodities are in good condition except for any exceptions written on these documents. All shipments shall be transported under the bill of lading utilized by Shipper or such other documents that Shipper and Carrier may mutually agree in writing to use. To the extent the terms and conditions of any bill of lading, purchase order, invoice or other document or instrument conflict with any provision of this Agreement, the terms of this",Shipping Documents,not provided
 "Emp + Spouse Emp + Child(ren) Emp + Family
 
                                 Total
-",Coverage Options
+",Coverage Options,not provided
 ": Decomposition products may include the following materials:
 
                       carbon dioxide carbon monoxide nitrogen oxides halogenated compounds metal oxide/oxides
-",Decomposition Products
-"The notes will be traded and settled pursuant to the applicable rules and operating procedures of TDCC and the TPEx as domestic bonds. Additionally, such investor may apply to TDCC (by filing in a prescribed form) to transfer the notes in its own account with Euroclear or Clearstream, Luxembourg to such TDCC account with Euroclear or Clearstream, Luxembourg for trading in the domestic market or vice versa for trading in overseas markets.",Trading and Settlement
+",Decomposition Products,not provided
+"The notes will be traded and settled pursuant to the applicable rules and operating procedures of TDCC and the TPEx as domestic bonds. Additionally, such investor may apply to TDCC (by filing in a prescribed form) to transfer the notes in its own account with Euroclear or Clearstream, Luxembourg to such TDCC account with Euroclear or Clearstream, Luxembourg for trading in the domestic market or vice versa for trading in overseas markets.",Trading and Settlement,not provided
 "3.1 General. Tenant shall continuously use and occupy the Premises only for the Permitted Use of the Premises to the extent not prohibited by the Rules and Regulations. Tenant shall not use or permit or suffer the use of the Premises for any other business or purpose. Tenant shall conform to the Rules and Regulations. ""Rules and Regulations"" shall mean the rules and regulations for the Project promulgated by Landlord from time to time. The Rules and Regulations which apply as of the Date of this Lease are attached as EXHIBIT ""D"".
 
                          3.2 Restricted Uses. Tenant expressly acknowledges that Landlord has advised it of restricted, prohibited, and exclusive uses (collectively, ""Restricted Uses"") applicable to the Premises. Restricted Uses are set forth on EXHIBIT ‚ÄúF‚Äù. Tenant shall not use or permit or suffer the use of the Premises for any of the Restricted Uses. Tenant further acknowledges that the provisions in the agreements granting exclusive use rights to other tenants in the Project and the provisions of this Lease concerning the Restricted Uses are in the nature of restrictive covenants running with the land.
@@ -593,8 +593,8 @@ o Gait with mild right foot drag. Negative Romberg.,Gait Assessment
                                  3.4.4 Waiver on Extension. Notwithstanding any other provisions in this Lease to the contrary, if Tenant exercises an option to extend the Lease Term at any time when Landlord is concurrently in violation of this section, and, at the time of Tenant‚Äôs election of its option to extend Tenant has failed to enforce its rights under this section for Landlord‚Äôs breach of its obligations within 90 days from the date Tenant notifies Landlord of the violation, in either of such events, Tenant shall be deemed to have waived its rights and remedies available under this section. Further, Tenant shall have no remedy for a violation of this section if another tenant or occupant in the Building violates the Exclusive Use by manner or use of its premises and (i) Landlord provides notice of the lease violation to such other tenant or occupant in the Building; and (ii) either the other tenant or occupant ceases the violation within 90 days, or Landlord commences an action (or arbitration, if required by such lease) against such other tenant or occupant in the Building, and thereafter uses good-faith efforts to enforce its rights under such lease.
 
                                  3.4.5 No Solicitation. During the Lease Term, Tenant shall not directly solicit by phone, in person contact, mail, e-mail, direct message, or other form of communication directed to a specific recipient any of Landlord‚Äôs Customers (as defined below) for lease, use, or occupancy of space in the Premises in connection with Tenant‚Äôs business. ‚ÄúSolicit‚Äù shall mean touring, or offering to tour, the Premises; offering or proposing terms to lease a suite in the Premises; entering into a letter of intent or proposal to lease a suite in the Premises; or providing a copy of Tenant‚Äôs membership agreement. ‚ÄúLandlord‚Äôs Customers‚Äù shall mean any person or entity who shall at that time be a tenant, subtenant, or other occupant of any part of the Building. This section shall not prohibit Tenant from advertising generally to the public, such as by newspaper, magazine, website, TV, radio, social media, and other forms of non-direct general advertisement.
-",Exclusive Use and No Solicitation
-The purchaser is purchasing the notes for its own account and the purchase of the notes will not cause the purchaser to be in violation of any,Purchaser Agreement
+",Exclusive Use and No Solicitation,not provided
+The purchaser is purchasing the notes for its own account and the purchase of the notes will not cause the purchaser to be in violation of any,Purchaser Agreement,not provided
 "Location:
 
             Death Valley, CA
@@ -628,7 +628,7 @@ The purchaser is purchasing the notes for its own account and the purchase of th
             Flight Conducted Under:
 
             Part 91: General Aviation - Personal
-",Accident Details
+",Accident Details,not provided
 "Form No.
 
                       Edition
@@ -722,7 +722,7 @@ The purchaser is purchasing the notes for its own account and the purchase of th
      0
 
           TEXAS LOSS CONTROL SERVICES
-",Forms and Endorsements
+",Forms and Endorsements,not provided
 "10
 
                   CATERERS
@@ -798,7 +798,7 @@ The purchaser is purchasing the notes for its own account and the purchase of th
             $ 88.00 INCLUDED
 
          PREMISES HOUSTON, TX
-",Restaurant and Hotel Sales
+",Restaurant and Hotel Sales,not provided
 "o Alert and oriented to person, place (‚Äúhospital‚Äù, not CMC), time (11/28/2006), and situation (‚Äúpossible stroke‚Äù).
 
                          o Slowed mentation and responded with limited speech.
@@ -816,7 +816,7 @@ The purchaser is purchasing the notes for its own account and the purchase of th
                          o Gait with mild right foot drag. Negative Romberg.
 
                          o Right brachioradialis, biceps, triceps, patellar DTRs at 3+, right Achilles at 2+, left DTRs at 2+ throughout. Upgoing Babinski on right, equivocal on left.
-",Neurological Exam Findings
+",Neurological Exam Findings,not provided
 "Section 13.7 This Agreement may not be modified or amended, except by an agreement in writing signed by an approved representative of Shipper and Carrier. The parties may waive any of the conditions contained herein or any of the obligations of the other party hereunder, but any such waiver shall be effective only if in writing and
 
                                             signed by the party waiving such conditions or obligations.
@@ -826,7 +826,7 @@ The purchaser is purchasing the notes for its own account and the purchase of th
                      Each person executing this Agreement warrants and represents that he is fully authorized to do
 
                                                        so.
-",Modification & Authorization
+",Modification & Authorization,not provided
 "Subject to and on the terms and conditions of this Lease, Landlord leases to Tenant and Tenant hires from Landlord the Premises.
 
                 1. BASIC LEASE INFORMATION AND DEFINED TERMS. The key business terms of this Lease and the defined terms used in this Lease are as follows:
@@ -968,16 +968,16 @@ The purchaser is purchasing the notes for its own account and the purchase of th
                                  1.22.5 Legal Holidays. New Year's Day, Memorial Day, Fourth of July, Labor Day, Thanksgiving Day, and Christmas Day.
 
                                  1.22.6 Normal Business Hours. Monday through Friday from 8:00 a.m. to 6:00 p.m., and Saturdays from 8:00
-",Lease Terms and Definitions
-"Xing Xing Inc. Noho Tower, Suzhou City, JiangSu Province, China 214500",Xing Xing Inc. Address
+",Lease Terms and Definitions,not provided
+"Xing Xing Inc. Noho Tower, Suzhou City, JiangSu Province, China 214500",Xing Xing Inc. Address,not provided
 "(g) All federal, state, county, municipal, and City income and other tax returns required to have been filed by Carrier have been timely filed and all taxes and related liabilities which have become due pursuant to such returns or
 
                                    pursuant to any assessments received by Carrier have been paid in full.
-",Tax Compliance
-"If the Project or any portion of it is damaged or destroyed by any casualty and: (a) the Building or Project or a material part of the Common Areas shall be so damaged that substantial alteration or reconstruction shall, in Landlord's opinion, be required (whether or not the Premises shall have been damaged by the casualty); or (b) Landlord is not permitted to rebuild the Building or Project or a material part of the Common Areas in substantially the same form as it existed before the damage; or (c) the Premises shall be materially damaged by casualty during the last two years of the Lease Term; or (d) any mortgagee requires that the insurance proceeds be applied to the payment of the mortgage debt; or (e) the damage is not fully covered by insurance maintained by Landlord; then Landlord may, within 90 days after the casualty, give notice to Tenant of Landlord's election to terminate this Lease, and the balance of the Lease Term shall automatically expire on the fifth day after the notice is delivered. If Landlord does not elect to terminate this Lease, provided that Tenant was operating from the Premises immediately prior to the casualty and will recommence operations after restoration of the Premises, Landlord shall proceed with reasonable diligence to restore the Building and the Premises to substantially the same condition they were in immediately before the casualty. However, Landlord shall not be required to restore any unleased premises in the Building or any portion of Tenant's property. Rent shall abate in proportion to the portion of the Premises not usable by Tenant as a result of any casualty resulting in damage to the Building which is covered by insurance carried or required to be carried by Landlord under this Lease, as of the date on which the Premises becomes unusable and the abatement shall continue until the date the Premises become tenantable again. Landlord shall not otherwise be liable to Tenant for any delay in restoring the Premises or any inconvenience or annoyance to Tenant or injury to Tenant's business resulting in any way from the damage or the repairs, Tenant's sole remedy being the right to an abatement of Rent.",Casualty Damage and Restoration
-"6.4.12 If the transfer is an assignment, the proposed assignee will assume in writing all of the obligations of Tenant under this Lease.",Assignment of Lease
-"12.6 Notices. Any notice or other communication required or permitted under this Agreement shall be in writing and deemed to have been duly given (i) five (5) Business Days following deposit in the mails if sent by registered or certified mail, postage prepaid,",Notices and Communication
-"13. SECURITY INTEREST. As security for Tenant's obligations under this Lease, Tenant grants to Landlord a security interest in this Lease and all property of Tenant now or hereafter placed in or upon the Premises including, all fixtures, furniture, inventory, machinery, equipment, merchandise, furnishings, and other articles of personal property, and all insurance proceeds of or relating to Tenant's property and all accessions and additions to, substitutions for, and replacements, products, and proceeds of the Tenant's property. This Lease constitutes a security agreement under the Florida Uniform Commercial Code. This security interest shall survive the expiration or sooner termination of this Lease and Landlord may, at any time, file a financing statement with the appropriate state or governmental agency with respect to such interest.",Security Interest
+",Tax Compliance,not provided
+"If the Project or any portion of it is damaged or destroyed by any casualty and: (a) the Building or Project or a material part of the Common Areas shall be so damaged that substantial alteration or reconstruction shall, in Landlord's opinion, be required (whether or not the Premises shall have been damaged by the casualty); or (b) Landlord is not permitted to rebuild the Building or Project or a material part of the Common Areas in substantially the same form as it existed before the damage; or (c) the Premises shall be materially damaged by casualty during the last two years of the Lease Term; or (d) any mortgagee requires that the insurance proceeds be applied to the payment of the mortgage debt; or (e) the damage is not fully covered by insurance maintained by Landlord; then Landlord may, within 90 days after the casualty, give notice to Tenant of Landlord's election to terminate this Lease, and the balance of the Lease Term shall automatically expire on the fifth day after the notice is delivered. If Landlord does not elect to terminate this Lease, provided that Tenant was operating from the Premises immediately prior to the casualty and will recommence operations after restoration of the Premises, Landlord shall proceed with reasonable diligence to restore the Building and the Premises to substantially the same condition they were in immediately before the casualty. However, Landlord shall not be required to restore any unleased premises in the Building or any portion of Tenant's property. Rent shall abate in proportion to the portion of the Premises not usable by Tenant as a result of any casualty resulting in damage to the Building which is covered by insurance carried or required to be carried by Landlord under this Lease, as of the date on which the Premises becomes unusable and the abatement shall continue until the date the Premises become tenantable again. Landlord shall not otherwise be liable to Tenant for any delay in restoring the Premises or any inconvenience or annoyance to Tenant or injury to Tenant's business resulting in any way from the damage or the repairs, Tenant's sole remedy being the right to an abatement of Rent.",Casualty Damage and Restoration,not provided
+"6.4.12 If the transfer is an assignment, the proposed assignee will assume in writing all of the obligations of Tenant under this Lease.",Assignment of Lease,not provided
+"12.6 Notices. Any notice or other communication required or permitted under this Agreement shall be in writing and deemed to have been duly given (i) five (5) Business Days following deposit in the mails if sent by registered or certified mail, postage prepaid,",Notices and Communication,not provided
+"13. SECURITY INTEREST. As security for Tenant's obligations under this Lease, Tenant grants to Landlord a security interest in this Lease and all property of Tenant now or hereafter placed in or upon the Premises including, all fixtures, furniture, inventory, machinery, equipment, merchandise, furnishings, and other articles of personal property, and all insurance proceeds of or relating to Tenant's property and all accessions and additions to, substitutions for, and replacements, products, and proceeds of the Tenant's property. This Lease constitutes a security agreement under the Florida Uniform Commercial Code. This security interest shall survive the expiration or sooner termination of this Lease and Landlord may, at any time, file a financing statement with the appropriate state or governmental agency with respect to such interest.",Security Interest,not provided
 "The site should schedule activities as appropriate. In cases where several study procedures are scheduled at the same time, the order of priority will be as follows: PK samples including blood sampling for blood glucose and laboratory samples per protocol nominal times. ECGs and vital sign measurements should be scheduled before but as close as possible to the PK sampling times. Injection-site assessments can be done after PK sampling.
 
                                                   3. Introduction
@@ -1015,16 +1015,16 @@ The purchaser is purchasing the notes for its own account and the purchase of th
                                        4. Objectives and Endpoints
 
               Table ITRV.1 shows the objectives and endpoints of the study.
-",Objectives and Endpoints
-The Services outlined in this SOW reflect the initial understanding of Client‚Äôs desired Deliverable and Company reserves the right to alter the manner in which Services are provided if Company determines different services are necessary to complete the Deliverable. Company shall provide the following Services to the Client:,Services Provided
+",Objectives and Endpoints,not provided
+The Services outlined in this SOW reflect the initial understanding of Client‚Äôs desired Deliverable and Company reserves the right to alter the manner in which Services are provided if Company determines different services are necessary to complete the Deliverable. Company shall provide the following Services to the Client:,Services Provided,not provided
 "Exploratory
 
              1. Explore the formation of anti-drug antibodies to insulin lispro
-",Exploratory Research
-"As of the Date of this Lease, there is no Security Deposit.",Security Deposit
-2. post-menopausal ‚Äì defined as a woman being amenorrheic for more than 1 year without an alternative medical cause and a serum follicle- stimulating hormone (FSH) level compatible with postmenopausal status. A FSH level in the post- menopausal range may be used to confirm a post- menopausal state in women not using hormonal contraception or hormonal replacement therapy.,Postmenopausal Definition
-"(i) the funds that the holder is using to acquire the notes are not the assets of an employee benefit plan subject to Title I of the Employee Retirement Income Security Act of 1974, as amended (‚ÄúERISA‚Äù), a plan described in and subject to Section 4975 of the Internal Revenue Code of 1986, as amended (the ‚ÄúCode‚Äù), a governmental plan subject to any federal, state or local law that is similar to the provisions of Section 406 of ERISA or Section 4975 of the Code, or an entity whose underlying assets include ‚Äúplan assets‚Äù by reason of Department of Labor regulation section 2510.3-101, as modified by Section 3(42) of ERISA, or otherwise; or",ERISA Compliance
-"is a summary of the offering circular and the Series H euro medium-term notes program of The Goldman Sachs Group, Inc. and should be read as an introduction to, and in conjunction with, the remainder of the offering circular, including any documents incorporated by reference therein, and the applicable pricing supplement, and you should base your investment decision on a consideration of the offering circular, including any documents incorporated by reference therein, and the applicable pricing supplement as a whole. No civil liability attaches to us in respect of this summary, including any translation thereof, unless it is misleading, inaccurate or inconsistent when read together with the remainder of the offering circular, including any documents incorporated by reference therein, and the applicable pricing supplement.",Investment Summary
+",Exploratory Research,not provided
+"As of the Date of this Lease, there is no Security Deposit.",Security Deposit,not provided
+2. post-menopausal ‚Äì defined as a woman being amenorrheic for more than 1 year without an alternative medical cause and a serum follicle- stimulating hormone (FSH) level compatible with postmenopausal status. A FSH level in the post- menopausal range may be used to confirm a post- menopausal state in women not using hormonal contraception or hormonal replacement therapy.,Postmenopausal Definition,not provided
+"(i) the funds that the holder is using to acquire the notes are not the assets of an employee benefit plan subject to Title I of the Employee Retirement Income Security Act of 1974, as amended (‚ÄúERISA‚Äù), a plan described in and subject to Section 4975 of the Internal Revenue Code of 1986, as amended (the ‚ÄúCode‚Äù), a governmental plan subject to any federal, state or local law that is similar to the provisions of Section 406 of ERISA or Section 4975 of the Code, or an entity whose underlying assets include ‚Äúplan assets‚Äù by reason of Department of Labor regulation section 2510.3-101, as modified by Section 3(42) of ERISA, or otherwise; or",ERISA Compliance,not provided
+"is a summary of the offering circular and the Series H euro medium-term notes program of The Goldman Sachs Group, Inc. and should be read as an introduction to, and in conjunction with, the remainder of the offering circular, including any documents incorporated by reference therein, and the applicable pricing supplement, and you should base your investment decision on a consideration of the offering circular, including any documents incorporated by reference therein, and the applicable pricing supplement as a whole. No civil liability attaches to us in respect of this summary, including any translation thereof, unless it is misleading, inaccurate or inconsistent when read together with the remainder of the offering circular, including any documents incorporated by reference therein, and the applicable pricing supplement.",Investment Summary,not provided
 "Prefix:
 
       XX
@@ -1058,14 +1058,14 @@ The Services outlined in this SOW reflect the initial understanding of Client‚
                  $
 
         320.00
-",Insurance Coverage Details
-"a trust (where the trustee is not an accredited investor) whose sole purpose is to hold investments and each beneficiary of the trust is an individual who is an accredited investor,",Trust with Accredited Investor Beneficiaries
+",Insurance Coverage Details,not provided
+"a trust (where the trustee is not an accredited investor) whose sole purpose is to hold investments and each beneficiary of the trust is an individual who is an accredited investor,",Trust with Accredited Investor Beneficiaries,not provided
 "o MRI w/ and w/o contrast: acute lacunar strokes in anterior basal ganglia and internal capsule on left and in the left central pons; nonspecific small area of enhancement in right basal ganglia possibly from subacute strokes; old encephalomalacic changes in both frontal lobes.
 
                          o Bilateral carotid u/s: negative study ‚Äì no atherosclerotic plaque seen in either bifurcation region
 
                          o On d/c, started on baby aspirin x 2 per day; discontinued by patient
-",MRI Results
-"Termination. This Agreement will immediately terminate at the expiration of the Term. This Agreement also may be immediately terminated by a Party by delivering written notice thereof to the other Party upon the occurrence of any of the following events: the other Party becomes bankrupt or insolvent, makes an unauthorized assignment, goes into liquidation, has proceedings initiated against it for the purpose of seeking a receiving order or winding up order, or applies to the courts for protection from its creditors.",Termination Conditions
-"Tenant shall continuously use and occupy the Premises only for the Permitted Use of the Premises to the extent not prohibited by the Rules and Regulations. Tenant shall not use or permit or suffer the use of the Premises for any other business or purpose. Tenant shall conform to the Rules and Regulations. ""Rules and Regulations"" shall mean the rules and regulations for the Project promulgated by Landlord from time to time. The Rules and Regulations which apply as of the Date of this Lease are attached as EXHIBIT ""D"".",Permitted Use
-"All aspects of the arbitration shall be treated as confidential. The Parties and the arbitrator/panel may disclose the existence, content or results of the arbitration only as provided in the Rules or by the Parties. Before making any such disclosure, a Party shall give written notice to all other Parties and shall afford",Confidentiality of Arbitration
+",MRI Results,not provided
+"Termination. This Agreement will immediately terminate at the expiration of the Term. This Agreement also may be immediately terminated by a Party by delivering written notice thereof to the other Party upon the occurrence of any of the following events: the other Party becomes bankrupt or insolvent, makes an unauthorized assignment, goes into liquidation, has proceedings initiated against it for the purpose of seeking a receiving order or winding up order, or applies to the courts for protection from its creditors.",Termination Conditions,not provided
+"Tenant shall continuously use and occupy the Premises only for the Permitted Use of the Premises to the extent not prohibited by the Rules and Regulations. Tenant shall not use or permit or suffer the use of the Premises for any other business or purpose. Tenant shall conform to the Rules and Regulations. ""Rules and Regulations"" shall mean the rules and regulations for the Project promulgated by Landlord from time to time. The Rules and Regulations which apply as of the Date of this Lease are attached as EXHIBIT ""D"".",Permitted Use,not provided
+"All aspects of the arbitration shall be treated as confidential. The Parties and the arbitrator/panel may disclose the existence, content or results of the arbitration only as provided in the Rules or by the Parties. Before making any such disclosure, a Party shall give written notice to all other Parties and shall afford",Confidentiality of Arbitration,not provided
