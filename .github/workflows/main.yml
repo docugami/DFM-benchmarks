@@ -1,0 +1,20 @@
+name: PR Gate
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run setup.sh
+        run: chmod +x setup.sh && ./setup.sh
+
+      - name: Run static_analysis.sh
+        run: chmod +x static_analysis.sh && ./static_analysis.sh
