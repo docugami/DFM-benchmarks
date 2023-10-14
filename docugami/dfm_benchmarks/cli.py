@@ -9,7 +9,7 @@ import sys
 from typing import Optional
 import typer
 
-from docugami.dfm_benchmarks.scorer import score_data, tabulate_scores
+from docugami.dfm_benchmarks.scorer import OutputFormat, score_data, tabulate_scores
 
 
 app = typer.Typer(
@@ -19,12 +19,15 @@ app = typer.Typer(
 
 
 @app.command()
-def eval(csv_file: Path):
+def eval(
+    csv_file: Path,
+    output_format: OutputFormat = OutputFormat.GITHUB_MARKDOWN,
+):
     with open(csv_file) as file:
         reader = csv.DictReader(file)
         data = [row for row in reader]
         scores = score_data(data)
-        table = tabulate_scores(scores)  # type: ignore
+        table = tabulate_scores(scores, output_format)
         typer.echo(table)
 
 
@@ -59,7 +62,7 @@ def main(
 if __name__ == "__main__":
     if sys.gettrace() is not None:
         # debugger attached, modify call below and attach
-        eval("./temp/CSL-Small.csv")
+        eval(Path("./temp/CSL-Small.csv"))  # nosec
     else:
         # proceed as normal
         app()

@@ -3,6 +3,7 @@ Copyright (c) Docugami Inc.
 """
 
 import collections
+from enum import Enum
 import re
 import string
 from typing import Dict, List
@@ -16,6 +17,11 @@ KEY_GT = "Ground Truth"
 sim_title = "Similarity@>="
 
 
+class OutputFormat(str, Enum):
+    TSV = "tsv"
+    GITHUB_MARKDOWN = "github"
+
+
 embedding_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
 
@@ -23,7 +29,7 @@ def _semantic_similarity(text1, text2):
     """Compute semantic similarity (cosine) between embeddings of given texts."""
     embedding_1 = embedding_model.encode(text1, convert_to_tensor=True)
     embedding_2 = embedding_model.encode(text2, convert_to_tensor=True)
-    return util.pytorch_cos_sim(embedding_1, embedding_2).item()
+    return util.pytorch_cos_sim(embedding_1, embedding_2).item()  # type: ignore
 
 
 def _normalize(text):
@@ -136,7 +142,7 @@ def score_data(data: List[Dict]):
     return scores
 
 
-def tabulate_scores(scores: Dict):
+def tabulate_scores(scores: Dict, output_format: OutputFormat = OutputFormat.GITHUB_MARKDOWN):
     """Tabulates a set of scores (output of the score() function) into a printable view"""
     headers = [
         "Model",
@@ -160,4 +166,4 @@ def tabulate_scores(scores: Dict):
             ]
         )
 
-    return tabulate(table, headers=headers, floatfmt=".2f", tablefmt="github")
+    return tabulate(table, headers=headers, floatfmt=".2f", tablefmt=output_format.value)
