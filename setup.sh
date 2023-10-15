@@ -2,9 +2,7 @@
 
 set -eux
 
-# install system dependencies for general development
-apt update
-apt install nodejs npm
-npm install
-
-poetry install
+# Install dependencies
+sudo apt-get update
+sudo apt-get install nodejs npm
+curl -sSL https://install.python-poetry.org | python3 -
