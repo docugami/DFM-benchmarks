@@ -56,12 +56,28 @@ def test_score_by_column() -> None:
 
 def test_score_by_separate_csvs() -> None:
     ground_truth_data = [
-        {"Column1": "Test sentence.", "Column2": "Another test."},
-        {"Column1": "Second sentence.", "Column2": "Yet another test."},
+        {
+            "Column1": "Test sentence.",
+            "Column2": "Another test.",
+            "Unique GT column": "xyz",
+        },
+        {
+            "Column1": "Second sentence.",
+            "Column2": "Yet another test.",
+            "Unique GT column": "xyz",
+        },
     ]
     model_output_data = [
-        {"Column1": "Test sentence.", "Column2": ""},
-        {"Column1": "A different second sentence.", "Column2": "Yet another test."},
+        {
+            "Column1": "Test sentence.",
+            "Column2": "",
+            "Unique MO column": "abc",
+        },
+        {
+            "Column1": "A different second sentence.",
+            "Column2": "Yet another test.",
+            "Unique MO column": "abc",
+        },
     ]
     expected_scores = {
         "Column1": {
@@ -79,7 +95,12 @@ def test_score_by_separate_csvs() -> None:
             f"{SIM_TITLE}0.6": 0.5,
         },
     }
-    scores = score_by_separate_csvs(ground_truth_data, model_output_data)
+    scores, ignored_columns_gt, ignored_columns_model = score_by_separate_csvs(
+        ground_truth_data, model_output_data
+    )
+
+    assert ignored_columns_gt == {"Unique GT column"}
+    assert ignored_columns_model == {"Unique MO column"}
 
     for column in expected_scores:
         for metric in expected_scores[column]:

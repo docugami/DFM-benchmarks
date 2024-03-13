@@ -44,6 +44,7 @@ def eval_by_column(
 def eval_by_csv(
     ground_truth_csv: Path,
     model_output_csv: Path,
+    key_column: Optional[str] = None,
     output_format: OutputFormat = OutputFormat.GITHUB_MARKDOWN,
 ) -> None:
 
@@ -54,9 +55,18 @@ def eval_by_csv(
             model_output_reader = csv.DictReader(model_output_file)
             model_output_data = [row for row in model_output_reader]
 
-            scores = score_by_separate_csvs(gt_data, model_output_data)
+            scores, ignored_columns_gt, ignored_columns_model = score_by_separate_csvs(
+                gt_data, model_output_data
+            )
             table = tabulate_scores(scores, output_format)
             typer.echo(table)
+
+            typer.echo(
+                f"Ignored columns in ground truth CSV (no match in model output): {ignored_columns_gt}"
+            )
+            typer.echo(
+                f"Ignored columns in model output CSV (no match in ground truth): {ignored_columns_model}"
+            )
 
 
 def _version_callback(value: bool) -> None:

@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Optional
 
 import numpy as np
 from tqdm import tqdm
@@ -106,8 +106,10 @@ def score_by_column(data: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
 
 
 def score_by_separate_csvs(
-    ground_truth_data: list[dict[str, Any]], model_output_data: list[dict[str, Any]]
-) -> dict:
+    ground_truth_data: list[dict[str, Any]],
+    model_output_data: list[dict[str, Any]],
+    key_column: Optional[str] = None,
+) -> tuple[dict, set, set]:
     """
     Scores model output against ground truth data when provided in separate CSVs.
     Each CSV should have columns with identical names for comparison. This function
@@ -124,22 +126,40 @@ def score_by_separate_csvs(
     Returns:
     - A dictionary of scores for each common column.
     """
-    gt_columns = set(ground_truth_data[0].keys())
-    model_columns = set(model_output_data[0].keys())
-    common_columns = gt_columns.intersection(model_columns)
-    ignored_columns = (gt_columns.union(model_columns)) - common_columns
+    # Create mappings for ground truth and model output columns from normalized to original names
+    gt_columns_normalized = {normalize(key): key for key in ground_truth_data[0].keys()}
+    model_columns_normalized = {
+        normalize(key): key for key in model_output_data[0].keys()
+    }
 
-    if ignored_columns:
-        print(
-            f"Warning: Ignoring columns without matches in both CSVs: {ignored_columns}"
-        )
+    # Identify common columns based on normalized names and keep track of the original names for later use
+    common_columns_normalized = set(gt_columns_normalized.keys()).intersection(
+        model_columns_normalized.keys()
+    )
 
+    # Initialize scores dictionary
     scores = {}
-    for column in tqdm(common_columns):
-        gt_annotations = [row[column] for row in ground_truth_data]
-        model_outputs = [row[column] for row in model_output_data]
+
+    # Prepare sets to track ignored columns based on their original names
+    ignored_columns_gt = set(ground_truth_data[0].keys()) - set(
+        gt_columns_normalized[norm] for norm in common_columns_normalized
+    )
+    ignored_columns_model = set(model_output_data[0].keys()) - set(
+        model_columns_normalized[norm] for norm in common_columns_normalized
+    )
+
+    # Iterate over common columns using the normalized names to facilitate comparison
+    for norm_col in common_columns_normalized:
+        original_gt_col = gt_columns_normalized[norm_col]
+        original_model_col = model_columns_normalized[norm_col]
+
+        gt_annotations = [row[original_gt_col] for row in ground_truth_data]
+        model_outputs = [row[original_model_col] for row in model_output_data]
+
         column_scores = _compute_scores_for_column(gt_annotations, model_outputs)
         _finalize_scores(column_scores, len(ground_truth_data))
-        scores[column] = column_scores
+        scores[original_gt_col] = (
+            column_scores  # Use the ground truth's original column name
+        )
 
-    return scores
+    return scores, ignored_columns_gt, ignored_columns_model
