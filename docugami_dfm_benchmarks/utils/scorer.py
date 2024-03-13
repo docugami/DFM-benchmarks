@@ -26,7 +26,7 @@ def _finalize_scores(scores: dict[str, Any], total_rows: int) -> None:
     avg_f1 = 0
     for metric in list(scores):
         if metric == "f1_per_row":
-            avg_f1 = np.mean(scores[metric]) * 100
+            avg_f1 = np.mean(scores[metric])
         else:
             scores[metric] /= total_rows
 

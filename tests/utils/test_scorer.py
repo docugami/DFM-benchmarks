@@ -14,7 +14,7 @@ def test_finalize_scores() -> None:
     _finalize_scores(scores, total_rows)
     assert scores["exact_match"] == 2 / 3
     assert scores["no_output"] == 1 / 3
-    assert scores["avg_f1"] == np.mean([100, 50, 75])
+    assert scores["avg_f1"] == np.mean([1, 0.5, 0.75])
 
 
 def test_score_by_column() -> None:
@@ -32,14 +32,14 @@ def test_score_by_column() -> None:
     ]
     expected_scores = {
         "Model A": {
-            "avg_f1": 50.0,
+            "avg_f1": 0.5,
             "exact_match": 0.5,
             "no_output": 0,
             f"{SIM_TITLE}0.8": 0.5,
             f"{SIM_TITLE}0.6": 0.5,
         },
         "Model B": {
-            "avg_f1": 50.0,
+            "avg_f1": 0.5,
             "exact_match": 0.5,
             "no_output": 0.5,
             f"{SIM_TITLE}0.8": 0.5,
@@ -81,14 +81,14 @@ def test_score_by_separate_csvs_aligned() -> None:
     ]
     expected_scores = {
         "Column1": {
-            "avg_f1": 90.0,
+            "avg_f1": 0.9,
             "exact_match": 0.5,
             "no_output": 0,
             f"{SIM_TITLE}0.8": 1.0,
             f"{SIM_TITLE}0.6": 1.0,
         },
         "Column2": {
-            "avg_f1": 50.0,  # One exact match, one no_output
+            "avg_f1": 0.5,  # One exact match, one no_output
             "exact_match": 0.5,
             "no_output": 0.5,
             f"{SIM_TITLE}0.8": 0.5,
@@ -156,14 +156,14 @@ def test_score_by_separate_csvs_with_key_column() -> None:
     ]
     expected_scores = {
         "Column1": {
-            "avg_f1": 90.0,  # Considering matched rows only
+            "avg_f1": 0.9,  # Considering matched rows only
             "exact_match": 0.5,
             "no_output": 0,
             f"{SIM_TITLE}0.8": 1.0,
             f"{SIM_TITLE}0.6": 1.0,
         },
         "Column2": {
-            "avg_f1": 50.0,  # One exact match, one no_output, considering only matched rows
+            "avg_f1": 0.5,  # One exact match, one no_output, considering only matched rows
             "exact_match": 0.5,
             "no_output": 0.5,
             f"{SIM_TITLE}0.8": 0.5,
