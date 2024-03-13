@@ -1,16 +1,11 @@
-"""
-Copyright (c) Docugami Inc.
-"""
-
 import csv
-from pathlib import Path
 import sys
-
+from pathlib import Path
 from typing import Optional
+
 import typer
 
-from docugami.dfm_benchmarks.scorer import OutputFormat, score_data, tabulate_scores
-
+from docugami_dfm_benchmarks.utils.scorer import OutputFormat, score_data, tabulate_scores
 
 app = typer.Typer(
     help="Benchmarks for Business Document Foundation Models",
@@ -22,7 +17,7 @@ app = typer.Typer(
 def eval(
     csv_file: Path,
     output_format: OutputFormat = OutputFormat.GITHUB_MARKDOWN,
-):
+) -> None:
     with open(csv_file) as file:
         reader = csv.DictReader(file)
         data = [row for row in reader]
@@ -55,7 +50,7 @@ def main(
         is_eager=True,
         help="Prints the version number.",
     )
-):
+) -> None:
     pass
 
 

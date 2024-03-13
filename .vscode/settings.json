@@ -1,6 +1,10 @@
 {
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "python.formatting.provider": "none"
+    "python.testing.pytestArgs": [
+        "tests",
+        "--doctest-modules",
+        "tests",
+        "docugami"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
