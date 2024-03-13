@@ -3,7 +3,7 @@
         "tests",
         "--doctest-modules",
         "tests",
-        "docugami"
+        "docugami_dfm_benchmarks"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true

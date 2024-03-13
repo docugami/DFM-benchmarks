@@ -13,7 +13,7 @@ from docugami_dfm_benchmarks.utils.text import normalize
 KEY_GT = "Ground Truth"
 
 
-def _finalize_scores(scores, total_rows):
+def _finalize_scores(scores: dict[str, Any], total_rows: int) -> None:
     """
     Normalizes scores by the total number of rows and calculates the average F1 score.
 
@@ -25,15 +25,17 @@ def _finalize_scores(scores, total_rows):
     """
     avg_f1 = 0
     for metric in list(scores):
-        if metric != "f1_per_row":
-            scores[metric] /= total_rows
-        else:
+        if metric == "f1_per_row":
             avg_f1 = np.mean(scores[metric]) * 100
+        else:
+            scores[metric] /= total_rows
 
     scores["avg_f1"] = avg_f1
 
 
-def _compute_scores_for_column(gt_annotations, model_outputs):
+def _compute_scores_for_column(
+    gt_annotations: list[str], model_outputs: list[str]
+) -> dict[str, Any]:
     """
     Computes the scores for a single column given lists of ground truth annotations and model outputs.
     """
@@ -49,19 +51,19 @@ def _compute_scores_for_column(gt_annotations, model_outputs):
         gt_annotation = normalize(gt_annotation)
         model_output = normalize(model_output)
 
-        scores["f1_per_row"].append(compute_f1(gt_annotation, model_output))
+        scores["f1_per_row"].append(compute_f1(gt_annotation, model_output))  # type: ignore
 
         if gt_annotation == model_output:
-            scores["exact_match"] += 1
+            scores["exact_match"] += 1  # type: ignore
         elif not model_output and gt_annotation:
-            scores["no_output"] += 1
+            scores["no_output"] += 1  # type: ignore
 
         if gt_annotation and model_output:
             similarity = semantic_similarity(gt_annotation, model_output)
             if similarity >= 0.8:
-                scores[f"{SIM_TITLE}0.8"] += 1
+                scores[f"{SIM_TITLE}0.8"] += 1  # type: ignore
             if similarity >= 0.6:
-                scores[f"{SIM_TITLE}0.6"] += 1
+                scores[f"{SIM_TITLE}0.6"] += 1  # type: ignore
 
     return scores
 
