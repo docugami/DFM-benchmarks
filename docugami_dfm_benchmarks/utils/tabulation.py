@@ -15,7 +15,7 @@ def tabulate_scores(
 ) -> str:
     """Tabulates a set of scores (output of the score() function) into a printable view"""
     headers = [
-        "Model",
+        "Column",
         "Exact Match",
         f"{SIM_TITLE} 0.8",
         f"{SIM_TITLE} 0.6",
