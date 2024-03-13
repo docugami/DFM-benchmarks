@@ -3,7 +3,7 @@ import collections
 from sentence_transformers import SentenceTransformer, util
 from torch.types import Number
 
-from docugami_dfm_benchmarks.utils.text import get_tokens
+from docugami_dfm_benchmarks.utils.text import get_tokens, normalize
 
 embedding_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
@@ -16,8 +16,8 @@ def semantic_similarity(text1: str, text2: str) -> Number:
 
 
 def compute_f1(text1: str, text2: str) -> float:
-    gold_toks = get_tokens(text1)
-    pred_toks = get_tokens(text2)
+    gold_toks = get_tokens(normalize(text1))
+    pred_toks = get_tokens(normalize(text2))
     common = collections.Counter(gold_toks) & collections.Counter(pred_toks)
     num_same = sum(common.values())
     if len(gold_toks) == 0 or len(pred_toks) == 0:
