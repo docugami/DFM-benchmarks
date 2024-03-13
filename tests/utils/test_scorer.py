@@ -1,6 +1,10 @@
 import numpy as np
 
-from docugami_dfm_benchmarks.utils.scorer import _finalize_scores, score_by_column
+from docugami_dfm_benchmarks.utils.scorer import (
+    _finalize_scores,
+    score_by_column,
+    score_by_separate_csvs,
+)
 from docugami_dfm_benchmarks.utils.similarity import SIM_TITLE
 
 
@@ -48,3 +52,37 @@ def test_score_by_column() -> None:
             assert np.isclose(
                 scores[column][metric], expected_scores[column][metric], atol=0.01
             )
+
+
+def test_score_by_separate_csvs() -> None:
+    ground_truth_data = [
+        {"Column1": "Test sentence.", "Column2": "Another test."},
+        {"Column1": "Second sentence.", "Column2": "Yet another test."},
+    ]
+    model_output_data = [
+        {"Column1": "Test sentence.", "Column2": ""},
+        {"Column1": "A different second sentence.", "Column2": "Yet another test."},
+    ]
+    expected_scores = {
+        "Column1": {
+            "avg_f1": 90.0,
+            "exact_match": 0.5,
+            "no_output": 0,
+            f"{SIM_TITLE}0.8": 1.0,
+            f"{SIM_TITLE}0.6": 1.0,
+        },
+        "Column2": {
+            "avg_f1": 50.0,  # One exact match, one no_output
+            "exact_match": 0.5,
+            "no_output": 0.5,
+            f"{SIM_TITLE}0.8": 0.5,
+            f"{SIM_TITLE}0.6": 0.5,
+        },
+    }
+    scores = score_by_separate_csvs(ground_truth_data, model_output_data)
+
+    for column in expected_scores:
+        for metric in expected_scores[column]:
+            assert np.isclose(
+                scores[column][metric], expected_scores[column][metric], atol=0.01
+            ), f"Failed on {column} {metric}: expected {expected_scores[column][metric]}, got {scores[column][metric]}"
