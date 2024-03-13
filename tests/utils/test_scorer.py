@@ -54,7 +54,7 @@ def test_score_by_column() -> None:
             )
 
 
-def test_score_by_separate_csvs() -> None:
+def test_score_by_separate_csvs_aligned() -> None:
     ground_truth_data = [
         {
             "Column1": "Test sentence.",
@@ -95,13 +95,97 @@ def test_score_by_separate_csvs() -> None:
             f"{SIM_TITLE}0.6": 0.5,
         },
     }
-    scores, ignored_columns_gt, ignored_columns_model = score_by_separate_csvs(
-        ground_truth_data, model_output_data
+    scores, ignored_columns_gt, ignored_columns_model, unmatched_gt, unmatched_mo = (
+        score_by_separate_csvs(ground_truth_data, model_output_data)
     )
 
-    assert ignored_columns_gt == {"Unique GT column"}
-    assert ignored_columns_model == {"Unique MO column"}
+    assert ignored_columns_gt == ["Unique GT column"]
+    assert ignored_columns_model == ["Unique MO column"]
 
+    assert not unmatched_gt
+    assert not unmatched_mo
+
+    for column in expected_scores:
+        for metric in expected_scores[column]:
+            assert np.isclose(
+                scores[column][metric], expected_scores[column][metric], atol=0.01
+            ), f"Failed on {column} {metric}: expected {expected_scores[column][metric]}, got {scores[column][metric]}"
+
+
+def test_score_by_separate_csvs_with_key_column() -> None:
+    # Test data includes a key column named "ID" for matching rows across CSVs
+    ground_truth_data = [
+        {
+            "ID": "1",
+            "Column1": "Test sentence.",
+            "Column2": "Another test.",
+            "Unique GT column": "xyz",
+        },
+        {
+            "ID": "2",
+            "Column1": "Second sentence.",
+            "Column2": "Yet another test.",
+            "Unique GT column": "xyz",
+        },
+        {
+            "ID": "3",
+            "Column1": "Third unmatched GT sentence.",
+            "Column2": "Unmatched GT test.",
+            "Unique GT column": "xyz",
+        },
+    ]
+    model_output_data = [
+        {
+            "ID": "2",
+            "Column1": "A different second sentence.",
+            "Column2": "Yet another test.",
+            "Unique MO column": "abc",
+        },
+        {
+            "ID": "1",
+            "Column1": "Test sentence.",
+            "Column2": "",
+            "Unique MO column": "abc",
+        },
+        {
+            "ID": "4",
+            "Column1": "Fourth unmatched MO sentence.",
+            "Column2": "Unmatched MO test.",
+            "Unique MO column": "abc",
+        },
+    ]
+    expected_scores = {
+        "Column1": {
+            "avg_f1": 90.0,  # Considering matched rows only
+            "exact_match": 0.5,
+            "no_output": 0,
+            f"{SIM_TITLE}0.8": 1.0,
+            f"{SIM_TITLE}0.6": 1.0,
+        },
+        "Column2": {
+            "avg_f1": 50.0,  # One exact match, one no_output, considering only matched rows
+            "exact_match": 0.5,
+            "no_output": 0.5,
+            f"{SIM_TITLE}0.8": 0.5,
+            f"{SIM_TITLE}0.6": 0.5,
+        },
+    }
+    key_column = "ID"
+    scores, ignored_columns_gt, ignored_columns_model, unmatched_gt, unmatched_mo = (
+        score_by_separate_csvs(
+            ground_truth_data, model_output_data, key_column=key_column
+        )
+    )
+
+    # Test for ignored columns
+    assert ignored_columns_gt == ["Unique GT column"]
+    assert ignored_columns_model == ["Unique MO column"]
+
+    # Test for mismatched rows
+    assert unmatched_gt == ["3"]
+    assert unmatched_mo == ["4"]
+
+    # Test scores for matched rows
     for column in expected_scores:
         for metric in expected_scores[column]:
             assert np.isclose(

@@ -48,16 +48,20 @@ def eval_by_csv(
     output_format: OutputFormat = OutputFormat.GITHUB_MARKDOWN,
 ) -> None:
 
-    with open(ground_truth_csv) as gt_file:
+    with open(ground_truth_csv, encoding="utf-8-sig") as gt_file:
         gt_reader = csv.DictReader(gt_file)
         gt_data = [row for row in gt_reader]
-        with open(model_output_csv) as model_output_file:
+        with open(model_output_csv, encoding="utf-8-sig") as model_output_file:
             model_output_reader = csv.DictReader(model_output_file)
             model_output_data = [row for row in model_output_reader]
 
-            scores, ignored_columns_gt, ignored_columns_model = score_by_separate_csvs(
-                gt_data, model_output_data
-            )
+            (
+                scores,
+                ignored_columns_gt,
+                ignored_columns_model,
+                unmatched_gt,
+                unmatched_mo,
+            ) = score_by_separate_csvs(gt_data, model_output_data, key_column)
             table = tabulate_scores(scores, output_format)
             typer.echo(table)
 
@@ -67,6 +71,14 @@ def eval_by_csv(
             typer.echo(
                 f"Ignored columns in model output CSV (no match in ground truth): {ignored_columns_model}"
             )
+
+            if key_column:
+                typer.echo(
+                    f"{len(unmatched_gt)} rows in ground truth did not have matching rows in model output (based on key column {key_column})"
+                )
+                typer.echo(
+                    f"{len(unmatched_mo)} rows in model output did not have matching rows in ground truth (based on key column {key_column})"
+                )
 
 
 def _version_callback(value: bool) -> None:
@@ -100,7 +112,12 @@ def main(
 if __name__ == "__main__":
     if sys.gettrace() is not None:
         # debugger attached, modify call below and attach
-        eval_by_column(Path("./temp/CSL-Small.csv"))  # nosec
+        # eval_by_column(Path("./temp/CSL-Small.csv"))  # nosec
+        eval_by_csv(
+            Path("./temp/tangible_ground_truth.csv"),
+            Path("./temp/tangible_model_output.csv"),
+            key_column="COMPLAINT PDF FILE NAME",
+        )
     else:
         # proceed as normal
         app()

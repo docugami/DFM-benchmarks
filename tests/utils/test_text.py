@@ -24,6 +24,11 @@ def test_normalize_with_extra_whitespace() -> None:
     assert normalize("  This    is  a  test.  ") == "this is test"
 
 
+def test_normalize_with_special() -> None:
+    """Test normalization with special chars."""
+    assert normalize("AMENDMENT_NUMBER") == "amendment number"
+
+
 def test_get_tokens_empty() -> None:
     """Test get_tokens returns an empty list for empty input."""
     assert get_tokens("") == []

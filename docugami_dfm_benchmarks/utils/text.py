@@ -13,6 +13,7 @@ def normalize(text: str) -> str:
         return " ".join(text.split())
 
     def remove_punc(text: str) -> str:
+        text = text.replace("_", " ")
         exclude = set(string.punctuation)
         return "".join(ch for ch in text if ch not in exclude)
 
@@ -20,6 +21,7 @@ def normalize(text: str) -> str:
         return text.lower()
 
     return white_space_fix(remove_articles(remove_punc(lower(text))))
+
 
 def get_tokens(s: str) -> list[str]:
     """Gets normalized tokens from the given string."""

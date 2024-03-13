@@ -33,13 +33,9 @@ def _finalize_scores(scores: dict[str, Any], total_rows: int) -> None:
     scores["avg_f1"] = avg_f1
 
 
-def _compute_scores_for_column(
-    gt_annotations: list[str], model_outputs: list[str]
-) -> dict[str, Any]:
-    """
-    Computes the scores for a single column given lists of ground truth annotations and model outputs.
-    """
-    scores = {
+def _initialize_score_structure() -> dict:
+    """Initializes the structure for storing scores."""
+    return {
         f"{SIM_TITLE}0.8": 0,
         f"{SIM_TITLE}0.6": 0,
         "exact_match": 0,
@@ -47,25 +43,38 @@ def _compute_scores_for_column(
         "f1_per_row": [],
     }
 
-    for gt_annotation, model_output in zip(gt_annotations, model_outputs):
-        gt_annotation = normalize(gt_annotation)
-        model_output = normalize(model_output)
 
-        scores["f1_per_row"].append(compute_f1(gt_annotation, model_output))  # type: ignore
+def _update_scores(score_struct: dict, gt_annotation: str, model_output: str) -> None:
+    """
+    Updates the score structure based on a single row's GT and model output, including semantic similarity.
+    """
+    # Normalize the inputs (Normalization may already be done before this call, depending on the flow)
+    gt_annotation = normalize(gt_annotation)
+    model_output = normalize(model_output)
 
-        if gt_annotation == model_output:
-            scores["exact_match"] += 1  # type: ignore
-        elif not model_output and gt_annotation:
-            scores["no_output"] += 1  # type: ignore
+    # Compute F1 score and update
+    score_struct["f1_per_row"].append(compute_f1(gt_annotation, model_output))
 
-        if gt_annotation and model_output:
-            similarity = semantic_similarity(gt_annotation, model_output)
-            if similarity >= 0.8:
-                scores[f"{SIM_TITLE}0.8"] += 1  # type: ignore
-            if similarity >= 0.6:
-                scores[f"{SIM_TITLE}0.6"] += 1  # type: ignore
+    # Check for exact matches
+    if gt_annotation == model_output:
+        score_struct["exact_match"] += 1
+    elif not model_output and gt_annotation:
+        # Consider cases where the model output is empty but there is a GT annotation
+        score_struct["no_output"] += 1
 
-    return scores
+    # Calculate semantic similarity if both GT and model outputs are non-empty
+    if gt_annotation and model_output:
+        similarity = semantic_similarity(gt_annotation, model_output)
+        if similarity >= 0.8:
+            score_struct[f"{SIM_TITLE}0.8"] += 1
+        if similarity >= 0.6:
+            score_struct[f"{SIM_TITLE}0.6"] += 1
+
+
+def _finalize_all_scores(scores: dict, total_matches: int) -> None:
+    """Finalizes all score structures within the scores dict."""
+    for score_struct in scores.values():
+        _finalize_scores(score_struct, total_matches)
 
 
 def score_by_column(data: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
@@ -98,8 +107,17 @@ def score_by_column(data: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     for column in tqdm(model_columns):
         gt_annotations = [normalize(row[KEY_GT]) for row in data]
         model_outputs = [normalize(row[column]) for row in data]
-        column_scores = _compute_scores_for_column(gt_annotations, model_outputs)
+
+        # Initialize the score structure for this column
+        column_scores = _initialize_score_structure()
+
+        # Update scores for each row
+        for gt_annotation, model_output in zip(gt_annotations, model_outputs):
+            _update_scores(column_scores, gt_annotation, model_output)
+
+        # Finalize scores by calculating average F1 and normalizing metrics
         _finalize_scores(column_scores, len(data))
+
         scores[column] = column_scores
 
     return scores
@@ -109,7 +127,7 @@ def score_by_separate_csvs(
     ground_truth_data: list[dict[str, Any]],
     model_output_data: list[dict[str, Any]],
     key_column: Optional[str] = None,
-) -> tuple[dict, set, set]:
+) -> tuple[dict, list[str], list[str], list[str], list[str]]:
     """
     Scores model output against ground truth data when provided in separate CSVs.
     Each CSV should have columns with identical names for comparison. This function
@@ -126,7 +144,6 @@ def score_by_separate_csvs(
     Returns:
     - A dictionary of scores for each common column.
     """
-    # Create mappings for ground truth and model output columns from normalized to original names
     gt_columns_normalized = {normalize(key): key for key in ground_truth_data[0].keys()}
     model_columns_normalized = {
         normalize(key): key for key in model_output_data[0].keys()
@@ -137,10 +154,7 @@ def score_by_separate_csvs(
         model_columns_normalized.keys()
     )
 
-    # Initialize scores dictionary
     scores = {}
-
-    # Prepare sets to track ignored columns based on their original names
     ignored_columns_gt = set(ground_truth_data[0].keys()) - set(
         gt_columns_normalized[norm] for norm in common_columns_normalized
     )
@@ -148,18 +162,43 @@ def score_by_separate_csvs(
         model_columns_normalized[norm] for norm in common_columns_normalized
     )
 
-    # Iterate over common columns using the normalized names to facilitate comparison
-    for norm_col in common_columns_normalized:
-        original_gt_col = gt_columns_normalized[norm_col]
-        original_model_col = model_columns_normalized[norm_col]
+    if key_column:
+        gt_keyed_data = {row[key_column]: row for row in ground_truth_data}
+        mo_keyed_data = {row[key_column]: row for row in model_output_data}
+        matched_rows_set = set(gt_keyed_data.keys()).intersection(mo_keyed_data.keys())
+        unmatched_gt = set(gt_keyed_data.keys()) - matched_rows_set
+        unmatched_mo = set(mo_keyed_data.keys()) - matched_rows_set
+        matched_rows = list(
+            matched_rows_set
+        )  # Ensure this is always a list for consistency
+    else:
+        matched_rows = list(range(len(ground_truth_data)))  # type: ignore
+        unmatched_gt = unmatched_mo = set()
 
-        gt_annotations = [row[original_gt_col] for row in ground_truth_data]
-        model_outputs = [row[original_model_col] for row in model_output_data]
+    for match in matched_rows:
+        if key_column:
+            gt_row = gt_keyed_data[match]
+            mo_row = mo_keyed_data[match]
+        else:
+            gt_row = ground_truth_data[int(match)]
+            mo_row = model_output_data[int(match)]
 
-        column_scores = _compute_scores_for_column(gt_annotations, model_outputs)
-        _finalize_scores(column_scores, len(ground_truth_data))
-        scores[original_gt_col] = (
-            column_scores  # Use the ground truth's original column name
-        )
+        for norm_col in common_columns_normalized:
+            original_gt_col = gt_columns_normalized[norm_col]
+            original_model_col = model_columns_normalized[norm_col]
+            if original_gt_col in gt_row and original_model_col in mo_row:
+                gt_annotation = gt_row[original_gt_col]
+                model_output = mo_row[original_model_col]
+                if original_gt_col not in scores:
+                    scores[original_gt_col] = _initialize_score_structure()
+                _update_scores(scores[original_gt_col], gt_annotation, model_output)
 
-    return scores, ignored_columns_gt, ignored_columns_model
+    _finalize_all_scores(scores, len(matched_rows))
+
+    return (
+        scores,
+        sorted(ignored_columns_gt),
+        sorted(ignored_columns_model),
+        sorted(unmatched_gt),
+        sorted(unmatched_mo),
+    )
