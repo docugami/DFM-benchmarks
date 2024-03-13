@@ -1,119 +1,143 @@
-from enum import Enum
 from typing import Any
 
 import numpy as np
-from tabulate import tabulate
 from tqdm import tqdm
 
-from docugami_dfm_benchmarks.utils.similarity import compute_f1, semantic_similarity
+from docugami_dfm_benchmarks.utils.similarity import (
+    SIM_TITLE,
+    compute_f1,
+    semantic_similarity,
+)
 from docugami_dfm_benchmarks.utils.text import normalize
 
 KEY_GT = "Ground Truth"
-sim_title = "Similarity@>="
 
 
-class OutputFormat(str, Enum):
-    TSV = "tsv"
-    GITHUB_MARKDOWN = "github"
-
-
-def score_data(data: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+def _finalize_scores(scores, total_rows):
     """
-    Scores the data in the given input. Assumes data is in the following format:
+    Normalizes scores by the total number of rows and calculates the average F1 score.
 
-    data_col_1 | data_col_2 | ... | data_col_n | Ground Truth   | model_col_1 | ... | model_col_n
-    -----------|------------|-----|------------|----------------|-------------|-----|------------
-    data_x     |  data_y    | ... |  data_z    | label_x        | label_y     | ... | label_z
-    ...
+    Parameters:
+    - scores: The scores dictionary for a single column.
+    - total_rows: The total number of rows over which scores were computed.
 
-    Ignores the data_col_* values, and looks at the columns to the right of Ground Truth.
-
-    Scores all the model_col_* values to the right of the Ground Truth column against the
-    Ground Truth column using a few different metrics.
+    Modifies the scores dictionary in-place to include normalized metrics and the average F1 score.
     """
-    column_headers = list(data[0].keys())
+    avg_f1 = 0
+    for metric in list(scores):
+        if metric != "f1_per_row":
+            scores[metric] /= total_rows
+        else:
+            avg_f1 = np.mean(scores[metric]) * 100
 
-    try:
-        gt_col_index = column_headers.index(KEY_GT)
-    except ValueError:
-        raise Exception(
-            f"Ground truth annotation column not found, expected {KEY_GT} in list {column_headers}"
-        )
+    scores["avg_f1"] = avg_f1
 
-    # all columns to the right of the GT column are models
-    ai_model_headers = column_headers[gt_col_index + 1 :]
-    scores: dict[str, dict[str, Any]] = {
-        model: {
-            f"{sim_title}0.8": 0,
-            f"{sim_title}0.6": 0,
-            "exact_match": 0,
-            "no_output": 0,
-            "f1_per_row": [],
-        }
-        for model in ai_model_headers
+
+def _compute_scores_for_column(gt_annotations, model_outputs):
+    """
+    Computes the scores for a single column given lists of ground truth annotations and model outputs.
+    """
+    scores = {
+        f"{SIM_TITLE}0.8": 0,
+        f"{SIM_TITLE}0.6": 0,
+        "exact_match": 0,
+        "no_output": 0,
+        "f1_per_row": [],
     }
 
-    for row in tqdm(data):
-        gt_annotation = normalize(row[KEY_GT])
-        for model in ai_model_headers:
-            model_output = normalize(row[model])
+    for gt_annotation, model_output in zip(gt_annotations, model_outputs):
+        gt_annotation = normalize(gt_annotation)
+        model_output = normalize(model_output)
 
-            # Token F1 for this row
-            scores[model]["f1_per_row"].append(compute_f1(gt_annotation, model_output))
+        scores["f1_per_row"].append(compute_f1(gt_annotation, model_output))
 
-            if gt_annotation == model_output:
-                # Exact match
-                scores[model]["exact_match"] += 1
-            elif not model_output and gt_annotation:
-                # Model output is empty, but ground truth annotation is not
-                scores[model]["no_output"] += 1
+        if gt_annotation == model_output:
+            scores["exact_match"] += 1
+        elif not model_output and gt_annotation:
+            scores["no_output"] += 1
 
-            if gt_annotation and model_output:
-                # Semantic similarity at different thresholds
-                similarity = semantic_similarity(gt_annotation, model_output)
-                if similarity >= 0.8:
-                    scores[model][f"{sim_title}0.8"] += 1
-                if similarity >= 0.6:
-                    scores[model][f"{sim_title}0.6"] += 1
-
-    total_rows = len(data)
-
-    for model in ai_model_headers:
-        scores[model][f"{sim_title}0.8"] = scores[model][f"{sim_title}0.8"] / total_rows
-        scores[model][f"{sim_title}0.6"] = scores[model][f"{sim_title}0.6"] / total_rows
-        scores[model]["exact_match"] = scores[model]["exact_match"] / total_rows
-        scores[model]["no_output"] = scores[model]["no_output"] / total_rows
-        scores[model]["avg_f1"] = np.mean(scores[model]["f1_per_row"]) * 100
+        if gt_annotation and model_output:
+            similarity = semantic_similarity(gt_annotation, model_output)
+            if similarity >= 0.8:
+                scores[f"{SIM_TITLE}0.8"] += 1
+            if similarity >= 0.6:
+                scores[f"{SIM_TITLE}0.6"] += 1
 
     return scores
 
 
-def tabulate_scores(
-    scores: dict, output_format: OutputFormat = OutputFormat.GITHUB_MARKDOWN
-) -> str:
-    """Tabulates a set of scores (output of the score() function) into a printable view"""
-    headers = [
-        "Model",
-        "Exact Match",
-        f"{sim_title} 0.8",
-        f"{sim_title} 0.6",
-        "Average F1",
-        "No Output",
-    ]
-    table = []
+def score_by_column(data: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    """
+    Scores the data provided in a single CSV, comparing model outputs directly against
+    a ground truth column. Assumes a specific CSV format where one column specifies the
+    ground truth, and all subsequent columns are model outputs to be scored against this ground truth.
 
-    for model, metrics in scores.items():
-        table.append(
-            [
-                model,
-                metrics["exact_match"],
-                metrics[f"{sim_title}0.8"],
-                metrics[f"{sim_title}0.6"],
-                metrics["avg_f1"],
-                metrics["no_output"],
-            ]
+    Parameters:
+    - data: List of dictionaries representing rows from the CSV. Each dictionary corresponds to a row,
+            with keys as column headers.
+
+    Returns:
+    - A dictionary of scores for each model output column, including metrics such as similarity thresholds,
+      exact match, no output, and average F1 score.
+    """
+    data_columns = list(data[0].keys())
+
+    try:
+        gt_col_index = data_columns.index(KEY_GT)
+    except ValueError:
+        raise Exception(
+            f"Ground truth annotation column not found, expected {KEY_GT} in list {data_columns}"
         )
 
-    return tabulate(
-        table, headers=headers, floatfmt=".2f", tablefmt=output_format.value
-    )
+    # all columns to the right of the GT column are considered models
+    model_columns = data_columns[gt_col_index + 1 :]
+    scores = {}
+
+    for column in tqdm(model_columns):
+        gt_annotations = [normalize(row[KEY_GT]) for row in data]
+        model_outputs = [normalize(row[column]) for row in data]
+        column_scores = _compute_scores_for_column(gt_annotations, model_outputs)
+        _finalize_scores(column_scores, len(data))
+        scores[column] = column_scores
+
+    return scores
+
+
+def score_by_separate_csvs(
+    ground_truth_data: list[dict[str, Any]], model_output_data: list[dict[str, Any]]
+) -> dict:
+    """
+    Scores model output against ground truth data when provided in separate CSVs.
+    Each CSV should have columns with identical names for comparison. This function
+    computes scores on a per-column basis for all common columns found in both CSVs.
+
+    Assumes that each row in the ground truth CSV corresponds to the same row in the
+    model output CSV. Columns not present in both CSVs are ignored, and a warning
+    is logged.
+
+    Parameters:
+    - ground_truth_data: List of dictionaries representing rows from the ground truth CSV.
+    - model_output_data: List of dictionaries representing rows from the model output CSV.
+
+    Returns:
+    - A dictionary of scores for each common column.
+    """
+    gt_columns = set(ground_truth_data[0].keys())
+    model_columns = set(model_output_data[0].keys())
+    common_columns = gt_columns.intersection(model_columns)
+    ignored_columns = (gt_columns.union(model_columns)) - common_columns
+
+    if ignored_columns:
+        print(
+            f"Warning: Ignoring columns without matches in both CSVs: {ignored_columns}"
+        )
+
+    scores = {}
+    for column in tqdm(common_columns):
+        gt_annotations = [row[column] for row in ground_truth_data]
+        model_outputs = [row[column] for row in model_output_data]
+        column_scores = _compute_scores_for_column(gt_annotations, model_outputs)
+        _finalize_scores(column_scores, len(ground_truth_data))
+        scores[column] = column_scores
+
+    return scores
