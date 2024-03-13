@@ -54,7 +54,13 @@ def test_get_tokens_complex() -> None:
     ]
     assert (
         get_tokens(
-            "This, is a complex test. With punctuation! And... extra whitespace?"
+            "This, is a complex test. With punctuation! And... extra/whitespace?"
         )
         == expected
     )
+
+
+def test_tokenize_date() -> None:
+    """Test tokenization of a date, since slashes are considered separators"""
+    expected = ["07", "1", "1982"]
+    assert get_tokens("07/1/1982") == expected

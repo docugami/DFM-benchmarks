@@ -13,8 +13,9 @@ def normalize(text: str) -> str:
         return " ".join(text.split())
 
     def remove_punc(text: str) -> str:
-        text = text.replace("_", " ")
+        text = text.replace("_", " ")  # consider underscores spaces
         exclude = set(string.punctuation)
+        exclude.remove("/")  # don't remove slashes
         return "".join(ch for ch in text if ch not in exclude)
 
     def lower(text: str) -> str:
@@ -27,4 +28,5 @@ def get_tokens(s: str) -> list[str]:
     """Gets normalized tokens from the given string."""
     if not s:
         return []
-    return normalize(s).split()
+    # Split on all whitespace and slashes
+    return re.split(r"[\s/]+", normalize(s))
