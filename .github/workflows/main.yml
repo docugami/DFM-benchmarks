@@ -1,20 +1,35 @@
-name: PR Gate
+name: CI
 
-on:
-  pull_request:
-    branches:
-      - main
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Check out the code
+        uses: actions/checkout@v3
 
-      - name: Run setup.sh
-        run: chmod +x setup.sh && ./setup.sh
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+        shell: bash
 
-      - name: Run static_analysis.sh
-        run: chmod +x static_analysis.sh && ./static_analysis.sh
+      - name: Install dependencies
+        run: poetry install --with dev
+
+      - name: Lint code
+        run: make lint
+
+      - name: Check spellings
+        run: make spell_check
+
+      - name: Test code
+        run: make test
+
+      - name: Check PR status
+        run: |
+          if [ -n "$(git diff --name-only ${{ github.base_ref }}..${{ github.head_ref }})" ]; then
+            echo "Changes detected. Please make sure to push all changes to the branch before merging.";
+            exit 1;
+          fi

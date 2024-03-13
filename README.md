@@ -3,7 +3,7 @@ This repo contains benchmark datasets and eval code for the Docugami Foundation 
 
 # Getting Started
 
-Make sure you have [poetry](https://python-poetry.org/docs/) installed on your machine, then just run: `setup.sh`. This should install all dependencies required.
+Make sure you have [poetry](https://python-poetry.org/docs/) installed on your machine, then just run: `poetry install` or `poetry install --with dev`. This should install all dependencies required.
 
 # Running Eval
 
@@ -16,7 +16,7 @@ poetry run benchmark eval /path/to/data.csv
 This should output results for the data in the benchmark, in tabular format. See current results section below for some examples for different benchmarks.
 
 # Data
-The data for the benchmarks was sourced from various long-form business documents, a sampling of which is included under `data/documents` as PDF or DOCX. Text was extracted from the documents using Docugami's internal models and then then split appropropriately for each task. 
+The data for the benchmarks was sourced from various long-form business documents, a sampling of which is included under `data/documents` as PDF or DOCX. Text was extracted from the documents using Docugami's internal models and then then split appropriately for each task. 
 
 All data is samples from Docugami released under the license of this repo, except for the medical data which was pulled from the openly accessible [UNC H&P Examples](https://www.med.unc.edu/medclerk/education/grading/history-and-physical-examination-h-p-examples/).
 
@@ -24,7 +24,7 @@ All data is samples from Docugami released under the license of this repo, excep
 
 As of 5/29/2023 we are measuring the following results for the Docugami Foundation Model (DFM), compared to other widely used models suitable for commercial use. We measured each model with the same prompt, with input text capped at 1024 chars, and max output tokens set to 10. 
 
-We are reporting different metrics against the human-annotated ground truth as implemented in `docugami/dfm_benchmarks/scorer.py` specifically Exact Match, Vector Similarity (above different thresholds) and Average F1 for output tokens. These metrics give a more balanced view of the output of each model, since generative labels are meant to capture the semantic meaning of each node, and may not necessarily match the ground truth exactly.
+We are reporting different metrics against the human-annotated ground truth as implemented in `docugami_dfm_benchmarks/scorer.py` specifically Exact Match, Vector Similarity (above different thresholds) and Average F1 for output tokens. These metrics give a more balanced view of the output of each model, since generative labels are meant to capture the semantic meaning of each node, and may not necessarily match the ground truth exactly.
 
 Specifically, DFM outperforms on the more stringent comparisons i.e., Exact match and Similarity@>=0.8 (which can be thought of as "almost exact match" in terms of semantic similarity). This means that Docugami’s output more closely matches human labels, either exactly or very closely. 
  
@@ -53,4 +53,4 @@ This benchmark measures the model's ability to produce human readable semantic l
 
 # Contributing
 
-We welcome contributions and feedback. We would appreciate it if you run `static_analysis.sh` and fix any issues prior to submitting your PR, but we are happy to fix such issues ourselves as part of reviewing your PR.
+We welcome contributions and feedback. We would appreciate it if you run `make format`, `make lint` and `make spell_check` prior to submitting your PR, but we are happy to fix such issues ourselves as part of reviewing your PR.
