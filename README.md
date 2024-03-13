@@ -10,7 +10,7 @@ Make sure you have [poetry](https://python-poetry.org/docs/) installed on your m
 The eval datasets, including DFM output labels, can be found under `data/`. To evaluate your own model, please add a new column to the CSV to the *right* of the _Ground Truth_ column, with your label for each row. Obviously, please don't train on any of the data in the eval dataset to avoid overfitting. Then, just run:
 
 ``
-poetry run benchmark eval /path/to/data.csv
+poetry run benchmark eval-by-column /path/to/data.csv
 ``
 
 This should output results for the data in the benchmark, in tabular format. See current results section below for some examples for different benchmarks.

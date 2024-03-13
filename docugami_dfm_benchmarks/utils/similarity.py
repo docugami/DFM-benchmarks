@@ -5,13 +5,15 @@ from torch.types import Number
 
 from docugami_dfm_benchmarks.utils.text import get_tokens, normalize
 
-embedding_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+SIM_TITLE = "Similarity@>="
+
+_embedding_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
 
 def semantic_similarity(text1: str, text2: str) -> Number:
     """Compute semantic similarity (cosine) between embeddings of given texts."""
-    embedding_1 = embedding_model.encode(text1, convert_to_tensor=True)
-    embedding_2 = embedding_model.encode(text2, convert_to_tensor=True)
+    embedding_1 = _embedding_model.encode(text1, convert_to_tensor=True)
+    embedding_2 = _embedding_model.encode(text2, convert_to_tensor=True)
     return util.pytorch_cos_sim(embedding_1, embedding_2).item()
 
 
